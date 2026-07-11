@@ -1,0 +1,32 @@
+2026-07-10T23:38:48.565764+00:00 ubuntu-server groupadd[1630]: group added to /etc/group: name=netdev, GID=1001
+2026-07-10T23:38:48.565768+00:00 ubuntu-server groupadd[1630]: group added to /etc/gshadow: name=netdev
+2026-07-10T23:38:48.565771+00:00 ubuntu-server groupadd[1630]: new group: name=netdev, GID=1001
+2026-07-10T23:38:48.565774+00:00 ubuntu-server useradd[1636]: new group: name=installer, GID=1002
+2026-07-10T23:38:48.565776+00:00 ubuntu-server useradd[1636]: new user: name=installer, UID=1001, GID=1002, home=/home/installer, shell=/usr/bin/subiquity-shell, from=none
+2026-07-10T23:38:48.565778+00:00 ubuntu-server useradd[1636]: add 'installer' to group 'adm'
+2026-07-10T23:38:48.565780+00:00 ubuntu-server useradd[1636]: add 'installer' to group 'dialout'
+2026-07-10T23:38:48.565784+00:00 ubuntu-server useradd[1636]: add 'installer' to group 'cdrom'
+2026-07-10T23:38:48.565786+00:00 ubuntu-server useradd[1636]: add 'installer' to group 'floppy'
+2026-07-10T23:38:48.565788+00:00 ubuntu-server useradd[1636]: add 'installer' to group 'sudo'
+2026-07-10T23:38:48.565790+00:00 ubuntu-server useradd[1636]: add 'installer' to group 'audio'
+2026-07-10T23:38:48.565793+00:00 ubuntu-server useradd[1636]: add 'installer' to group 'dip'
+2026-07-10T23:38:48.565795+00:00 ubuntu-server useradd[1636]: add 'installer' to group 'video'
+2026-07-10T23:38:48.565797+00:00 ubuntu-server useradd[1636]: add 'installer' to group 'plugdev'
+2026-07-10T23:38:48.565801+00:00 ubuntu-server useradd[1636]: add 'installer' to group 'lxd'
+2026-07-10T23:38:48.565803+00:00 ubuntu-server useradd[1636]: add 'installer' to group 'netdev'
+2026-07-10T23:38:48.565805+00:00 ubuntu-server useradd[1636]: add 'installer' to shadow group 'adm'
+2026-07-10T23:38:48.565808+00:00 ubuntu-server useradd[1636]: add 'installer' to shadow group 'dialout'
+2026-07-10T23:38:48.565810+00:00 ubuntu-server useradd[1636]: add 'installer' to shadow group 'cdrom'
+2026-07-10T23:38:48.565812+00:00 ubuntu-server useradd[1636]: add 'installer' to shadow group 'floppy'
+2026-07-10T23:38:48.565816+00:00 ubuntu-server useradd[1636]: add 'installer' to shadow group 'sudo'
+2026-07-10T23:38:48.565818+00:00 ubuntu-server useradd[1636]: add 'installer' to shadow group 'audio'
+2026-07-10T23:38:48.565820+00:00 ubuntu-server useradd[1636]: add 'installer' to shadow group 'dip'
+2026-07-10T23:38:48.565822+00:00 ubuntu-server useradd[1636]: add 'installer' to shadow group 'video'
+2026-07-10T23:38:48.565825+00:00 ubuntu-server useradd[1636]: add 'installer' to shadow group 'plugdev'
+2026-07-10T23:38:48.565827+00:00 ubuntu-server useradd[1636]: add 'installer' to shadow group 'lxd'
+2026-07-10T23:38:48.565830+00:00 ubuntu-server useradd[1636]: add 'installer' to shadow group 'netdev'
+2026-07-10T23:38:48.566102+00:00 ubuntu-server systemd-logind[1664]: New seat seat0.
+2026-07-10T23:38:48.566105+00:00 ubuntu-server systemd-logind[1664]: Watching system buttons on /dev/input/event1 (Power Button)
+2026-07-10T23:38:48.566108+00:00 ubuntu-server systemd-logind[1664]: Watching system buttons on /dev/input/event0 (Power Button)
+2026-07-10T23:38:48.566112+00:00 ubuntu-server systemd-logind[1664]: Watching system buttons on /dev/input/event2 (LITE-ON Technology USB NetVista Full Width Keyboard.)
+2026-07-10T23:39:01.534156+00:00 ubuntu-server chpasswd[2016]: pam_unix(chpasswd:chauthtok): password changed for installer

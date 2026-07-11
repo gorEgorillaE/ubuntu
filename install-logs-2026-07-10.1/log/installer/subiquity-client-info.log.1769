@@ -1,0 +1,5 @@
+2026-07-10 23:41:28,485 INFO subiquity:131 Starting Subiquity TUI revision 7020 of snap /snap/subiquity/7020
+2026-07-10 23:41:28,485 INFO subiquity:132 Arguments passed: ['/snap/subiquity/7020/usr/bin/subiquity']
+2026-07-10 23:41:31,006 INFO subiquity/Serial:105 start: starting UI
+2026-07-10 23:41:31,006 INFO subiquity/Serial:110 finish: (skipped) SUCCESS
+2026-07-10 23:41:31,006 INFO subiquity/Welcome:105 start: starting UI

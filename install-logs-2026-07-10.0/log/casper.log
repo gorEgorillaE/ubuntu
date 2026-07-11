@@ -1,0 +1,75 @@
+Begin: Running /scripts/casper-premount ... done.
+done.
+Windows is hibernated, refused to mount.
+The disk contains an unclean file system (0, 0).
+Metadata kept in Windows cache, refused to mount.
+Falling back to read-only mount because the NTFS partition is in an
+unsafe state. Please resume and shutdown Windows fully (no hibernation
+or fast restarting.)
+Could not mount read-write, trying read-only
+The disk contains an unclean file system (0, 0).
+Metadata kept in Windows cache, refused to mount.
+Falling back to read-only mount because the NTFS partition is in an
+unsafe state. Please resume and shutdown Windows fully (no hibernation
+or fast restarting.)
+Could not mount read-write, trying read-only
+GPT PMBR size mismatch (6651307 != 15644911) will be corrected by write.
+The backup GPT table is not on the end of the device.
+GPT PMBR size mismatch (6651307 != 15644911) will be corrected by write.
+The backup GPT table is not on the end of the device.
+48+0 records in
+48+0 records out
+GPT PMBR size mismatch (6651307 != 15644911) will be corrected by write.
+The backup GPT table is not on the end of the device. This problem will be corrected by write.
+48+0 records in
+48+0 records out
+done.
+Begin: Creating debconf-communicate fifo mechanism ... done.
+Begin: Running /scripts/casper-bottom ... Begin: Moving mount points... ... done.
+Begin: Configuring fstab... ... done.
+Begin: Setting up locales... ... done.
+Begin: Setting up automatic login... ... done.
+Begin: Setting hostname... ... done.
+Begin: Setting up console keyboard... ... done.
+Begin: Applying desktop settings... ... done.
+Begin: Regenerating SSL certificate... ... done.
+Begin: Loading preseed file... ... done.
+Begin: Adding live session user... ... passwd: password changed.
+done.
+Begin: Setting up init... ... done.
+Begin: Configuring accessibility options... ... done.
+Begin: Disabling update-notifier... ... done.
+Begin: Enabling detection of crashes... ... done.
+Begin: Disabling unnecessary KDE services... ... done.
+Begin: Disabling the lock screen for LXQt (LP: #2000787)... ... done.
+Begin: Adding APT-CDROM source... ... Using CD-ROM mount point /cdrom/
+Identifying... [a7d7909f2793d7e90df5e2f01e03e689-2]
+Scanning disc for index files...
+Found 2 package indexes, 0 source indexes, 0 translation indexes and 1 signatures
+Found label 'Ubuntu-Server 24.04.4 LTS _Noble Numbat_ - Release amd64 (20260210)'
+This disc is called: 
+'Ubuntu-Server 24.04.4 LTS _Noble Numbat_ - Release amd64 (20260210)'
+Copying package lists...gpgv: Signature made Tue Feb 10 06:52:40 2026 UTC
+gpgv:                using RSA key 843938DF228D22F7B3742BC0D94AA3F0EFE21092
+gpgv: Good signature from "Ubuntu CD Image Automatic Signing Key (2012) <cdimage@ubuntu.com>"
+gpgv: asserted signer '843938DF228D22F7B3742BC0D94AA3F0EFE21092' with algo rsa4096
+Reading Package Indexes... 0%Reading Package Indexes... Done
+Writing new source list
+Source list entries for this disc are:
+deb cdrom:[Ubuntu-Server 24.04.4 LTS _Noble Numbat_ - Release amd64 (20260210)]/ noble main restricted
+Repeat this process for the rest of the CDs in your set.
+done.
+Begin: Possibly disabling update-initramfs (useless on a live CD)... ... done.
+Begin: Grant administrative PolicyKit privileges to default user... ... done.
+Begin: Configuring jackd2... ... done.
+Begin: Disabling gnome-initial-setup... ... chown: warning: '.' should be ':': 'ubuntu-server.ubuntu-server'
+done.
+Begin: Disabling security unattended-upgrades... ... done.
+Begin: Disabling snap refresh... ... done.
+Begin: Overriding 71-nvidia.rules... ... done.
+Begin: Configuring pollinate... ... done.
+Begin: Setting up networking for ubuntu-server... ... done.
+Begin: Disabling ibus-mozc auto setup... ... chown: warning: '.' should be ':': 'ubuntu-server.ubuntu-server'
+done.
+Begin: Set up the installer log directory for adm users... ... done.
+Begin: Tweaks for the desktop image... ... done.

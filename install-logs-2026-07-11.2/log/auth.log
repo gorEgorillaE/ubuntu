@@ -1,0 +1,28 @@
+2026-07-11T00:22:29.431972+00:00 ubuntu-server groupadd[1331]: group added to /etc/group: name=netdev, GID=1001
+2026-07-11T00:22:29.431975+00:00 ubuntu-server groupadd[1331]: group added to /etc/gshadow: name=netdev
+2026-07-11T00:22:29.431978+00:00 ubuntu-server groupadd[1331]: new group: name=netdev, GID=1001
+2026-07-11T00:22:29.431982+00:00 ubuntu-server useradd[1337]: new group: name=installer, GID=1002
+2026-07-11T00:22:29.431985+00:00 ubuntu-server useradd[1337]: new user: name=installer, UID=1001, GID=1002, home=/home/installer, shell=/usr/bin/subiquity-shell, from=none
+2026-07-11T00:22:29.431988+00:00 ubuntu-server useradd[1337]: add 'installer' to group 'adm'
+2026-07-11T00:22:29.431991+00:00 ubuntu-server useradd[1337]: add 'installer' to group 'dialout'
+2026-07-11T00:22:29.431994+00:00 ubuntu-server useradd[1337]: add 'installer' to group 'cdrom'
+2026-07-11T00:22:29.431997+00:00 ubuntu-server useradd[1337]: add 'installer' to group 'floppy'
+2026-07-11T00:22:29.431999+00:00 ubuntu-server useradd[1337]: add 'installer' to group 'sudo'
+2026-07-11T00:22:29.432002+00:00 ubuntu-server useradd[1337]: add 'installer' to group 'audio'
+2026-07-11T00:22:29.432005+00:00 ubuntu-server useradd[1337]: add 'installer' to group 'dip'
+2026-07-11T00:22:29.432008+00:00 ubuntu-server useradd[1337]: add 'installer' to group 'video'
+2026-07-11T00:22:29.432010+00:00 ubuntu-server useradd[1337]: add 'installer' to group 'plugdev'
+2026-07-11T00:22:29.432013+00:00 ubuntu-server useradd[1337]: add 'installer' to group 'lxd'
+2026-07-11T00:22:29.432016+00:00 ubuntu-server useradd[1337]: add 'installer' to group 'netdev'
+2026-07-11T00:22:29.432019+00:00 ubuntu-server useradd[1337]: add 'installer' to shadow group 'adm'
+2026-07-11T00:22:29.432021+00:00 ubuntu-server useradd[1337]: add 'installer' to shadow group 'dialout'
+2026-07-11T00:22:29.432040+00:00 ubuntu-server useradd[1337]: add 'installer' to shadow group 'cdrom'
+2026-07-11T00:22:29.432044+00:00 ubuntu-server useradd[1337]: add 'installer' to shadow group 'floppy'
+2026-07-11T00:22:29.432047+00:00 ubuntu-server useradd[1337]: add 'installer' to shadow group 'sudo'
+2026-07-11T00:22:29.432050+00:00 ubuntu-server useradd[1337]: add 'installer' to shadow group 'audio'
+2026-07-11T00:22:29.432053+00:00 ubuntu-server useradd[1337]: add 'installer' to shadow group 'dip'
+2026-07-11T00:22:29.432056+00:00 ubuntu-server useradd[1337]: add 'installer' to shadow group 'video'
+2026-07-11T00:22:29.432059+00:00 ubuntu-server useradd[1337]: add 'installer' to shadow group 'plugdev'
+2026-07-11T00:22:29.432093+00:00 ubuntu-server useradd[1337]: add 'installer' to shadow group 'lxd'
+2026-07-11T00:22:29.432096+00:00 ubuntu-server useradd[1337]: add 'installer' to shadow group 'netdev'
+2026-07-11T00:22:39.260059+00:00 ubuntu-server chpasswd[1717]: pam_unix(chpasswd:chauthtok): password changed for installer

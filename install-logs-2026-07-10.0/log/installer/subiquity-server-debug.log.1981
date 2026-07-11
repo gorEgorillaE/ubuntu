@@ -1,0 +1,729 @@
+2026-07-10 23:38:59,275 INFO subiquity:207 Starting Subiquity server revision 7020 of snap /snap/subiquity/7020 of version 24.04.4
+2026-07-10 23:38:59,275 INFO subiquity:211 Arguments passed: ['/snap/subiquity/7020/lib/python3.10/site-packages/subiquity/cmd/server.py']
+2026-07-10 23:38:59,275 DEBUG subiquity:212 Kernel commandline: CommandLineParams(_raw='BOOT_IMAGE=/casper/vmlinuz ---\n', _tokens={'---'}, _values={'BOOT_IMAGE': '/casper/vmlinuz'})
+2026-07-10 23:38:59,275 DEBUG subiquity:213 Environment: environ({'PYTHONIOENCODING': 'utf-8', 'SNAP_COMMON': '/var/snap/subiquity/common', 'SNAP_INSTANCE_KEY': '', 'USER': 'root', 'SNAP_UID': '0', 'SNAP_LIBRARY_PATH': '/var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32', 'PYTHON': '/snap/subiquity/7020/usr/bin/python3.10', 'SNAP_USER_DATA': '/root/snap/subiquity/7020', 'SUBIQUITY_ROOT': '/snap/subiquity/7020', 'SYSTEMD_EXEC_PID': '1940', 'SNAP_REVISION': '7020', 'JOURNAL_STREAM': '8:8679', 'SNAP_CONTEXT': 'ezjWb8Ag2_FHiBOdz2BFwUC_RrKbdTwhIDvNr5BK0mAJvRGVCHeI', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/system.slice/snap.subiquity.subiquity-server.service/memory.pressure', 'SNAP_VERSION': '24.04.4', 'SNAP_INSTANCE_NAME': 'subiquity', 'PATH': '/snap/subiquity/7020/bin:/snap/subiquity/7020/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/subiquity/7020/bin:/snap/subiquity/7020/sbin', 'INVOCATION_ID': '523702bbc2144d51a12d468e5733e041', 'SNAP_DATA': '/var/snap/subiquity/7020', 'LANG': 'C.UTF-8', 'PY3OR2_PYTHON': '/snap/subiquity/7020/usr/bin/python3.10', 'SNAP_ARCH': 'amd64', 'SNAP_COOKIE': 'ezjWb8Ag2_FHiBOdz2BFwUC_RrKbdTwhIDvNr5BK0mAJvRGVCHeI', 'SNAP_USER_COMMON': '/root/snap/subiquity/common', 'SNAP_REEXEC': '', 'SNAP_NAME': 'subiquity', 'PWD': '/var/snap/subiquity/7020', 'SNAP_REAL_HOME': '/root', 'SNAP': '/snap/subiquity/7020', 'SNAP_EUID': '0', 'PYTHONPATH': ':/snap/subiquity/7020/lib/python3.10/site-packages', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'APPORT_DATA_DIR': '/snap/subiquity/7020/share/apport'})
+2026-07-10 23:38:59,275 DEBUG asyncio:54 Using selector: EpollSelector
+2026-07-10 23:38:59,276 DEBUG subiquitycore.prober:33 Prober() init finished, data:None
+2026-07-10 23:38:59,338 DEBUG curtin:120 Running command ['dpkg', '--print-architecture'] with allowed return codes [0] (capture=True)
+2026-07-10 23:38:59,352 DEBUG subiquity.models.source:93 loaded 2 sources from '/cdrom/casper/install-sources.yaml'
+2026-07-10 23:38:59,354 DEBUG subiquitycore.netplan:113 config for zz-all-en = {'match': {'name': 'en*'}, 'dhcp4': True}
+2026-07-10 23:38:59,355 DEBUG subiquitycore.netplan:113 config for zz-all-eth = {'match': {'name': 'eth*'}, 'dhcp4': True}
+2026-07-10 23:38:59,401 DEBUG subiquitycore.utils:77 run_command called: ['dpkg-query', '-W', '-f=${Version}', 'cloud-init']
+2026-07-10 23:38:59,416 DEBUG subiquitycore.utils:96 run_command ['dpkg-query', '-W', '-f=${Version}', 'cloud-init'] exited with code 0
+2026-07-10 23:38:59,416 DEBUG subiquity.cloudinit:58 cloud-init version: 25.2
+2026-07-10 23:38:59,416 DEBUG subiquitycore.utils:119 arun_command called: ['cloud-init', 'status', '--wait', '--format=json']
+2026-07-10 23:39:00,392 DEBUG curtin.reporting.start.subiquity/Meta/status_GET:45 start: subiquity/Meta/status_GET: 
+2026-07-10 23:39:00,393 DEBUG curtin.reporting.finish.subiquity/Meta/status_GET:45 finish: subiquity/Meta/status_GET: SUCCESS: 200 {"state": "CLOUD_INIT_WAIT", "confirming_tty": "", "error": null, "nonreporta...
+2026-07-10 23:39:00,408 DEBUG subiquitycore.utils:133 arun_command ['cloud-init', 'status', '--wait', '--format=json'] exited with code 0
+2026-07-10 23:39:00,409 DEBUG subiquity.server.server:881 waited 1.0074965953826904s for cloud-init
+2026-07-10 23:39:00,409 DEBUG subiquity.server.server:882 cloud-init status: 'done'
+2026-07-10 23:39:00,409 DEBUG curtin.reporting.start.subiquity/load_cloud_config:45 start: subiquity/load_cloud_config: 
+2026-07-10 23:39:00,410 DEBUG subiquity.cloudinit:38 Loaded cloud config from /run/cloud-init/combined-cloud-config.json
+2026-07-10 23:39:00,410 DEBUG curtin.reporting.start.subiquity/load_cloud_config/extract_autoinstall:45 start: subiquity/load_cloud_config/extract_autoinstall: 
+2026-07-10 23:39:00,410 DEBUG curtin.reporting.start.subiquity/load_cloud_config/extract_autoinstall:45 start: subiquity/load_cloud_config/extract_autoinstall: 
+2026-07-10 23:39:00,459 DEBUG subiquitycore.utils:119 arun_command called: ['cloud-init', 'schema', '--system']
+2026-07-10 23:39:00,461 DEBUG curtin.reporting.start.subiquity/Meta/status_GET:45 start: subiquity/Meta/status_GET: 
+2026-07-10 23:39:01,481 DEBUG subiquitycore.utils:133 arun_command ['cloud-init', 'schema', '--system'] exited with code 0
+2026-07-10 23:39:01,482 DEBUG curtin.reporting.finish.subiquity/load_cloud_config/extract_autoinstall:45 finish: subiquity/load_cloud_config/extract_autoinstall: SUCCESS: 
+2026-07-10 23:39:01,483 DEBUG subiquity.server.server:872 no autoinstall found in cloud-config
+2026-07-10 23:39:01,483 DEBUG curtin.reporting.finish.subiquity/load_cloud_config:45 finish: subiquity/load_cloud_config: SUCCESS: 
+2026-07-10 23:39:01,483 DEBUG subiquitycore.utils:77 run_command called: ['ssh-keygen', '-lf', '/home/installer/.ssh/authorized_keys']
+2026-07-10 23:39:01,491 DEBUG subiquitycore.utils:96 run_command ['ssh-keygen', '-lf', '/home/installer/.ssh/authorized_keys'] exited with code 255
+2026-07-10 23:39:01,491 DEBUG subiquitycore.ssh:53 ssh-keygen -lf /home/installer/.ssh/authorized_keys failed '/home/installer/.ssh/authorized_keys is not a public key file.\r\n'
+2026-07-10 23:39:01,491 DEBUG subiquitycore.utils:77 run_command called: chpasswd
+2026-07-10 23:39:01,535 DEBUG subiquitycore.utils:96 run_command chpasswd exited with code 0
+2026-07-10 23:39:01,536 DEBUG curtin.reporting.start.subiquity/load_autoinstall_config:45 start: subiquity/load_autoinstall_config: 
+2026-07-10 23:39:01,536 DEBUG subiquity.server.server:704 load_autoinstall_config only_early True file None
+2026-07-10 23:39:01,536 DEBUG curtin.reporting.finish.subiquity/load_autoinstall_config:45 finish: subiquity/load_autoinstall_config: SUCCESS: 
+2026-07-10 23:39:01,536 DEBUG curtin.reporting.start.subiquity/load_autoinstall_config:45 start: subiquity/load_autoinstall_config: 
+2026-07-10 23:39:01,536 DEBUG subiquity.server.server:704 load_autoinstall_config only_early False file None
+2026-07-10 23:39:01,536 DEBUG curtin.reporting.finish.subiquity/load_autoinstall_config:45 finish: subiquity/load_autoinstall_config: SUCCESS: 
+2026-07-10 23:39:01,537 DEBUG subiquitycore.core:118 starting controllers
+2026-07-10 23:39:01,538 DEBUG subiquity.server.controllers.kernel:65 Using kernel linux-generic due to /run/kernel-meta-package
+2026-07-10 23:39:01,542 DEBUG probert.network:582 event for link_change: NEW {'ifindex': 1, 'flags': 65609, 'arptype': 772, 'family': 0, 'is_vlan': False, 'name': b'lo'}
+2026-07-10 23:39:01,542 DEBUG probert.network:582 event for link_change: NEW {'ifindex': 2, 'flags': 69699, 'arptype': 1, 'family': 0, 'is_vlan': False, 'name': b'enp7s0'}
+2026-07-10 23:39:01,543 DEBUG probert.network:582 event for addr_change: NEW {'ifindex': 1, 'flags': 128, 'family': 2, 'scope': 254, 'local': b'127.0.0.1/8'}
+2026-07-10 23:39:01,544 DEBUG probert.network:582 event for addr_change: NEW {'ifindex': 2, 'flags': 0, 'family': 2, 'scope': 0, 'local': b'192.168.68.63/22'}
+2026-07-10 23:39:01,544 DEBUG probert.network:582 event for addr_change: NEW {'ifindex': 1, 'flags': 640, 'family': 10, 'scope': 254, 'local': b'::1'}
+2026-07-10 23:39:01,544 DEBUG probert.network:582 event for addr_change: NEW {'ifindex': 2, 'flags': 128, 'family': 10, 'scope': 253, 'local': b'fe80::32c5:99ff:fe46:3d6a/64'}
+2026-07-10 23:39:01,550 DEBUG probert.network:677 link_change NEW {'ifindex': 1, 'flags': 65609, 'arptype': 772, 'family': 0, 'is_vlan': False, 'name': b'lo'}
+2026-07-10 23:39:01,624 DEBUG subiquitycore.models.network:484 new_link 1 lo lo
+2026-07-10 23:39:01,624 DEBUG subiquitycore.models.network:486 ignoring based on type
+2026-07-10 23:39:01,624 DEBUG probert.network:677 link_change NEW {'ifindex': 2, 'flags': 69699, 'arptype': 1, 'family': 0, 'is_vlan': False, 'name': b'enp7s0'}
+2026-07-10 23:39:01,678 DEBUG subiquitycore.models.network:484 new_link 2 enp7s0 eth
+2026-07-10 23:39:01,679 DEBUG subiquitycore.models.network:515 new_link 2 enp7s0 with config {'dhcp4': True}
+2026-07-10 23:39:01,679 DEBUG root:38 start: subiquity/Network/_send_update: NEW enp7s0
+2026-07-10 23:39:01,679 DEBUG root:38 finish: subiquity/Network/_send_update: SUCCESS: NEW enp7s0
+2026-07-10 23:39:01,679 DEBUG probert.network:722 addr_change NEW {'ifindex': 1, 'flags': 128, 'family': 2, 'scope': 254, 'local': b'127.0.0.1/8'}
+2026-07-10 23:39:01,679 DEBUG probert.network:722 addr_change NEW {'ifindex': 2, 'flags': 0, 'family': 2, 'scope': 0, 'local': b'192.168.68.63/22'}
+2026-07-10 23:39:01,679 DEBUG root:38 start: subiquity/Network/_send_update: CHANGE enp7s0
+2026-07-10 23:39:01,679 DEBUG root:38 finish: subiquity/Network/_send_update: SUCCESS: CHANGE enp7s0
+2026-07-10 23:39:01,679 DEBUG probert.network:722 addr_change NEW {'ifindex': 1, 'flags': 640, 'family': 10, 'scope': 254, 'local': b'::1'}
+2026-07-10 23:39:01,679 DEBUG probert.network:722 addr_change NEW {'ifindex': 2, 'flags': 128, 'family': 10, 'scope': 253, 'local': b'fe80::32c5:99ff:fe46:3d6a/64'}
+2026-07-10 23:39:01,680 DEBUG root:38 start: subiquity/Network/_send_update: CHANGE enp7s0
+2026-07-10 23:39:01,680 DEBUG root:38 finish: subiquity/Network/_send_update: SUCCESS: CHANGE enp7s0
+2026-07-10 23:39:01,680 DEBUG probert.network:736 route_change NEW {'family': 2, 'type': 1, 'table': 254, 'dst': b'default', 'ifindex': 2}
+2026-07-10 23:39:01,701 DEBUG pyroute2.ndb.132885621904944.sources.localhost:84 init
+2026-07-10 23:39:01,701 DEBUG pyroute2.ndb.132885621904944.sources.localhost:448 starting the source
+2026-07-10 23:39:01,701 DEBUG pyroute2.ndb.132885621904944.sources.localhost/nsmanager:84 init
+2026-07-10 23:39:01,701 DEBUG pyroute2.ndb.132885621904944.sources.localhost:84 connecting
+2026-07-10 23:39:01,702 DEBUG pyroute2.ndb.132885621904944.sources.localhost:84 loading
+2026-07-10 23:39:01,702 DEBUG pyroute2.ndb.132885621904944.sources.localhost/nsmanager:448 starting the source
+2026-07-10 23:39:01,703 DEBUG pyroute2.ndb.132885621904944.sources.localhost/nsmanager:84 connecting
+2026-07-10 23:39:01,705 DEBUG pyroute2.ndb.132885621904944.sources.localhost/nsmanager:84 loading
+2026-07-10 23:39:01,706 DEBUG pyroute2.ndb.132885621904944.sources.localhost:84 running
+2026-07-10 23:39:01,707 DEBUG pyroute2.ndb.132885621904944.sources.localhost/nsmanager:84 running
+2026-07-10 23:39:01,732 DEBUG pyroute2.ndb.132885621904944.sources.localhost:464 source shutdown
+2026-07-10 23:39:01,732 DEBUG pyroute2.ndb.132885621904944.sources.localhost:84 stop
+2026-07-10 23:39:01,732 DEBUG pyroute2.ndb.132885621904944.sources.localhost:439 sync
+2026-07-10 23:39:01,732 DEBUG pyroute2.ndb.132885621904944.main:406 closing source [stop] <IPRoute {'target': 'localhost', 'nlm_generator': 1}>
+2026-07-10 23:39:01,732 DEBUG pyroute2.ndb.132885621904944.sources.localhost:434 shutdown handled by the main thread
+2026-07-10 23:39:01,732 DEBUG pyroute2.ndb.132885621904944.sources.localhost:462 already stopped
+2026-07-10 23:39:01,732 DEBUG pyroute2.ndb.132885621904944.sources.localhost:84 stopped
+2026-07-10 23:39:01,733 DEBUG pyroute2.ndb.132885621904944.main:406 flush DB for the target localhost
+2026-07-10 23:39:01,733 DEBUG pyroute2.ndb.132885621904944.sources.localhost/nsmanager:464 source shutdown
+2026-07-10 23:39:01,733 DEBUG pyroute2.ndb.132885621904944.main:406 closing source [running] <NetNSManager {'target': 'localhost/nsmanager'}>
+2026-07-10 23:39:01,734 DEBUG pyroute2.ndb.132885621904944.sources.localhost/nsmanager:84 stop
+2026-07-10 23:39:01,734 DEBUG pyroute2.ndb.132885621904944.sources.localhost/nsmanager:462 already stopped
+2026-07-10 23:39:01,734 DEBUG pyroute2.ndb.132885621904944.sources.localhost/nsmanager:439 sync
+2026-07-10 23:39:01,734 DEBUG pyroute2.ndb.132885621904944.sources.localhost/nsmanager:434 shutdown handled by the main thread
+2026-07-10 23:39:01,734 DEBUG pyroute2.ndb.132885621904944.sources.localhost/nsmanager:84 stopped
+2026-07-10 23:39:01,734 DEBUG pyroute2.ndb.132885621904944.main:406 flush DB for the target localhost/nsmanager
+2026-07-10 23:39:01,735 DEBUG subiquitycore.controllers.network:103 default routes True
+2026-07-10 23:39:01,735 DEBUG probert.network:736 route_change NEW {'family': 2, 'type': 1, 'table': 254, 'dst': b'2.248.248.2', 'ifindex': 2}
+2026-07-10 23:39:01,735 DEBUG probert.network:736 route_change NEW {'family': 2, 'type': 1, 'table': 254, 'dst': b'2.248.248.248', 'ifindex': 2}
+2026-07-10 23:39:01,735 DEBUG probert.network:736 route_change NEW {'family': 2, 'type': 1, 'table': 254, 'dst': b'192.168.68.0/22', 'ifindex': 2}
+2026-07-10 23:39:01,735 DEBUG probert.network:736 route_change NEW {'family': 2, 'type': 1, 'table': 254, 'dst': b'192.168.68.1', 'ifindex': 2}
+2026-07-10 23:39:01,735 DEBUG probert.network:736 route_change NEW {'family': 2, 'type': 1, 'table': 254, 'dst': b'194.58.205.20', 'ifindex': 2}
+2026-07-10 23:39:01,735 DEBUG probert.network:736 route_change NEW {'family': 2, 'type': 2, 'table': 255, 'dst': b'127.0.0.0/8', 'ifindex': 1}
+2026-07-10 23:39:01,735 DEBUG probert.network:736 route_change NEW {'family': 2, 'type': 2, 'table': 255, 'dst': b'127.0.0.1', 'ifindex': 1}
+2026-07-10 23:39:01,735 DEBUG probert.network:736 route_change NEW {'family': 2, 'type': 3, 'table': 255, 'dst': b'127.255.255.255', 'ifindex': 1}
+2026-07-10 23:39:01,735 DEBUG probert.network:736 route_change NEW {'family': 2, 'type': 2, 'table': 255, 'dst': b'192.168.68.63', 'ifindex': 2}
+2026-07-10 23:39:01,736 DEBUG probert.network:736 route_change NEW {'family': 2, 'type': 3, 'table': 255, 'dst': b'192.168.71.255', 'ifindex': 2}
+2026-07-10 23:39:01,736 DEBUG probert.network:736 route_change NEW {'family': 10, 'type': 1, 'table': 254, 'dst': b'fe80::/64', 'ifindex': 2}
+2026-07-10 23:39:01,736 DEBUG probert.network:736 route_change NEW {'family': 10, 'type': 2, 'table': 255, 'dst': b'::1', 'ifindex': 1}
+2026-07-10 23:39:01,736 DEBUG probert.network:736 route_change NEW {'family': 10, 'type': 2, 'table': 255, 'dst': b'fe80::32c5:99ff:fe46:3d6a', 'ifindex': 2}
+2026-07-10 23:39:01,736 DEBUG probert.network:736 route_change NEW {'family': 10, 'type': 5, 'table': 255, 'dst': b'ff00::/8', 'ifindex': 2}
+2026-07-10 23:39:01,738 DEBUG subiquitycore.core:121 controllers started
+2026-07-10 23:39:01,738 INFO root:38 start: subiquity/apply_autoinstall_config: 
+2026-07-10 23:39:01,738 DEBUG root:38 start: subiquity/Early/apply_autoinstall_config: 
+2026-07-10 23:39:01,738 DEBUG root:38 finish: subiquity/Early/apply_autoinstall_config: SUCCESS: 
+2026-07-10 23:39:01,738 DEBUG root:38 start: subiquity/Reporting/apply_autoinstall_config: 
+2026-07-10 23:39:01,738 DEBUG root:38 finish: subiquity/Reporting/apply_autoinstall_config: SUCCESS: 
+2026-07-10 23:39:01,739 DEBUG root:38 start: subiquity/Error/apply_autoinstall_config: 
+2026-07-10 23:39:01,739 DEBUG root:38 finish: subiquity/Error/apply_autoinstall_config: SUCCESS: 
+2026-07-10 23:39:01,739 DEBUG root:38 start: subiquity/Userdata/apply_autoinstall_config: 
+2026-07-10 23:39:01,739 DEBUG root:38 finish: subiquity/Userdata/apply_autoinstall_config: SUCCESS: 
+2026-07-10 23:39:01,739 DEBUG subiquity.models.subiquity:255 model userdata for postinstall stage is configured, to go {'snaplist', 'packages', 'locale', 'ssh', 'drivers', 'identity', 'ubuntu_pro'}
+2026-07-10 23:39:01,739 DEBUG root:38 start: subiquity/Package/apply_autoinstall_config: 
+2026-07-10 23:39:01,739 DEBUG root:38 finish: subiquity/Package/apply_autoinstall_config: SUCCESS: 
+2026-07-10 23:39:01,739 DEBUG subiquity.models.subiquity:255 model packages for postinstall stage is configured, to go {'snaplist', 'locale', 'ssh', 'drivers', 'identity', 'ubuntu_pro'}
+2026-07-10 23:39:01,739 DEBUG root:38 start: subiquity/Debconf/apply_autoinstall_config: 
+2026-07-10 23:39:01,739 DEBUG root:38 finish: subiquity/Debconf/apply_autoinstall_config: SUCCESS: 
+2026-07-10 23:39:01,740 DEBUG subiquity.models.subiquity:255 model debconf_selections for install stage is configured, to go {'keyboard', 'filesystem', 'kernel', 'source'}
+2026-07-10 23:39:01,740 DEBUG subiquity.server.server:554 apply_autoinstall_config: skipping Locale as interactive
+2026-07-10 23:39:01,740 DEBUG subiquity.server.server:554 apply_autoinstall_config: skipping Refresh as interactive
+2026-07-10 23:39:01,740 DEBUG root:38 start: subiquity/Kernel/apply_autoinstall_config: 
+2026-07-10 23:39:01,740 DEBUG root:38 finish: subiquity/Kernel/apply_autoinstall_config: SUCCESS: 
+2026-07-10 23:39:01,740 DEBUG subiquity.models.subiquity:255 model kernel for install stage is configured, to go {'filesystem', 'keyboard', 'source'}
+2026-07-10 23:39:01,740 DEBUG subiquity.server.server:554 apply_autoinstall_config: skipping Integrity as interactive
+2026-07-10 23:39:01,740 DEBUG subiquity.server.server:554 apply_autoinstall_config: skipping Keyboard as interactive
+2026-07-10 23:39:01,740 DEBUG root:38 start: subiquity/Zdev/apply_autoinstall_config: 
+2026-07-10 23:39:01,740 DEBUG root:38 finish: subiquity/Zdev/apply_autoinstall_config: SUCCESS: 
+2026-07-10 23:39:01,740 DEBUG subiquity.server.server:554 apply_autoinstall_config: skipping Source as interactive
+2026-07-10 23:39:01,740 DEBUG subiquity.server.server:554 apply_autoinstall_config: skipping Network as interactive
+2026-07-10 23:39:01,740 DEBUG subiquity.server.server:554 apply_autoinstall_config: skipping UbuntuPro as interactive
+2026-07-10 23:39:01,740 DEBUG subiquity.server.server:554 apply_autoinstall_config: skipping Proxy as interactive
+2026-07-10 23:39:01,740 DEBUG subiquity.server.server:554 apply_autoinstall_config: skipping Mirror as interactive
+2026-07-10 23:39:01,740 DEBUG subiquity.server.server:554 apply_autoinstall_config: skipping Filesystem as interactive
+2026-07-10 23:39:01,740 DEBUG subiquity.server.server:554 apply_autoinstall_config: skipping Identity as interactive
+2026-07-10 23:39:01,740 DEBUG subiquity.server.server:554 apply_autoinstall_config: skipping SSH as interactive
+2026-07-10 23:39:01,741 DEBUG subiquity.server.server:554 apply_autoinstall_config: skipping SnapList as interactive
+2026-07-10 23:39:01,741 DEBUG root:38 start: subiquity/Ad/apply_autoinstall_config: 
+2026-07-10 23:39:01,741 DEBUG root:38 finish: subiquity/Ad/apply_autoinstall_config: SUCCESS: 
+2026-07-10 23:39:01,741 DEBUG subiquity.server.server:554 apply_autoinstall_config: skipping Codecs as interactive
+2026-07-10 23:39:01,741 DEBUG subiquity.server.server:554 apply_autoinstall_config: skipping Drivers as interactive
+2026-07-10 23:39:01,741 DEBUG subiquity.server.server:554 apply_autoinstall_config: skipping OEM as interactive
+2026-07-10 23:39:01,741 DEBUG subiquity.server.server:554 apply_autoinstall_config: skipping TimeZone as interactive
+2026-07-10 23:39:01,741 DEBUG subiquity.server.server:554 apply_autoinstall_config: skipping Install as interactive
+2026-07-10 23:39:01,741 DEBUG subiquity.server.server:554 apply_autoinstall_config: skipping Updates as interactive
+2026-07-10 23:39:01,741 DEBUG root:38 start: subiquity/Late/apply_autoinstall_config: 
+2026-07-10 23:39:01,741 DEBUG root:38 finish: subiquity/Late/apply_autoinstall_config: SUCCESS: 
+2026-07-10 23:39:01,741 DEBUG subiquity.server.server:554 apply_autoinstall_config: skipping Shutdown as interactive
+2026-07-10 23:39:01,741 INFO root:38 finish: subiquity/apply_autoinstall_config: SUCCESS: 
+2026-07-10 23:39:01,742 INFO root:38 finish: subiquity/Meta/status_GET: SUCCESS: 200 {"state": "WAITING", "confirming_tty": "", "error": null, "nonreportable_erro...
+2026-07-10 23:39:01,742 DEBUG subiquity.models.subiquity:255 model locale for postinstall stage is configured, to go {'snaplist', 'ssh', 'drivers', 'identity', 'ubuntu_pro'}
+2026-07-10 23:39:01,742 DEBUG root:38 start: subiquity/Refresh/configure_snapd: 
+2026-07-10 23:39:01,742 DEBUG root:38 start: subiquity/Refresh/configure_snapd/get_details: 
+2026-07-10 23:39:01,743 DEBUG root:38 start: subiquity/Refresh/check_for_update: 
+2026-07-10 23:39:01,743 DEBUG root:38 start: subiquity/OEM/load_metapackages_list: 
+2026-07-10 23:39:01,743 DEBUG root:38 start: subiquity/OEM/load_metapackages_list/wait_confirmation: 
+2026-07-10 23:39:01,743 DEBUG root:38 start: subiquity/Install/install: 
+2026-07-10 23:39:01,746 DEBUG subiquity.server.controllers.snaplist:79 loading list of snaps
+2026-07-10 23:39:01,768 DEBUG urllib3.connectionpool:453 http://localhost:None "GET /v2/snaps/subiquity HTTP/1.1" 200 1309
+2026-07-10 23:39:01,794 DEBUG root:38 start: subiquity/Filesystem/_probe: 
+2026-07-10 23:39:01,795 DEBUG root:38 start: subiquity/Refresh/check_for_update: 
+2026-07-10 23:39:01,795 DEBUG root:38 start: subiquity/SnapList/loader: 
+2026-07-10 23:39:01,795 DEBUG root:38 start: subiquity/Filesystem/_probe/probe_once: restricted=False
+2026-07-10 23:39:01,796 DEBUG asyncio:54 Using selector: EpollSelector
+2026-07-10 23:39:01,796 ERROR root:38 finish: subiquity/Refresh/check_for_update: FAIL: cancelled
+2026-07-10 23:39:01,796 DEBUG root:38 start: subiquity/SnapList/loader/list: 
+2026-07-10 23:39:01,797 DEBUG root:38 finish: subiquity/Refresh/configure_snapd/get_details: SUCCESS: current version of snap is: '24.04.4'
+2026-07-10 23:39:01,799 DEBUG subiquity.server.controllers.refresh:139 snap tracking , not resetting based on .disk/info
+2026-07-10 23:39:01,799 DEBUG root:38 finish: subiquity/Refresh/configure_snapd: SUCCESS: 
+2026-07-10 23:39:01,799 INFO root:38 start: subiquity/Meta/client_variant_GET: 
+2026-07-10 23:39:01,799 INFO root:38 finish: subiquity/Meta/client_variant_GET: SUCCESS: 200 "server"
+2026-07-10 23:39:01,809 INFO root:38 start: subiquity/Meta/status_GET: 
+2026-07-10 23:39:01,809 INFO root:38 finish: subiquity/Meta/status_GET: SUCCESS: 200 {"state": "WAITING", "confirming_tty": "", "error": null, "nonreportable_erro...
+2026-07-10 23:39:01,810 INFO root:38 start: subiquity/Meta/client_variant_POST: 
+2026-07-10 23:39:01,810 INFO root:38 finish: subiquity/Meta/client_variant_POST: SUCCESS: 200 null
+2026-07-10 23:39:01,810 INFO root:38 start: subiquity/Meta/status_GET: 
+2026-07-10 23:39:01,811 DEBUG root:38 start: subiquity/Locale/GET: 
+2026-07-10 23:39:01,811 DEBUG root:38 finish: subiquity/Locale/GET: SUCCESS: 200 "C.UTF-8"
+2026-07-10 23:39:01,969 WARNING subiquity.server.geoip:113 geoip lookup failed: ClientResponseError(RequestInfo(url=URL('https://geoip.ubuntu.com/lookup'), method='GET', headers=<CIMultiDictProxy('Host': 'geoip.ubuntu.com', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'User-Agent': 'Python/3.10 aiohttp/3.8.1')>, real_url=URL('https://geoip.ubuntu.com/lookup')), (), status=500, message='Internal Server Error', headers=<CIMultiDictProxy('Date': 'Fri, 10 Jul 2026 23:39:01 GMT', 'Server': 'Apache/2.4.29 (Ubuntu)', 'Connection': 'close', 'Transfer-Encoding': 'chunked', 'Content-Type': 'text/html')>)
+2026-07-10 23:39:02,274 DEBUG urllib3.connectionpool:453 http://localhost:None "GET /v2/find?section=server HTTP/1.1" 200 None
+2026-07-10 23:39:02,276 DEBUG root:38 finish: subiquity/SnapList/loader/list: SUCCESS: 
+2026-07-10 23:39:02,295 DEBUG subiquity.server.controllers.snaplist:92 fetched list of 16 snaps
+2026-07-10 23:39:02,295 DEBUG root:38 start: subiquity/SnapList/loader/fetch/microk8s: 
+2026-07-10 23:39:02,484 DEBUG urllib3.connectionpool:453 http://localhost:None "GET /v2/find?select=refresh HTTP/1.1" 200 None
+2026-07-10 23:39:02,486 DEBUG subiquity.server.controllers.refresh:201 check_for_update received [Snap(id='PMrrV4ml8uWuEUDBT8dSGnKUYbevVhc4', name='snapd', status=<SnapStatus.AVAILABLE: 'available'>, version='2.76', revision='27406', channel='latest/stable', publisher=Publisher(id='canonical', username='canonical', display_name='Canonical')), Snap(id='amcUKQILKXHHTlmSa7NMdnXSx02dNeeT', name='core22', status=<SnapStatus.AVAILABLE: 'available'>, version='20260225', revision='2411', channel='latest/stable', publisher=Publisher(id='canonical', username='canonical', display_name='Canonical')), Snap(id='ba2aj8guta0zSRlT3QM5aJNAUXPlBtf9', name='subiquity', status=<SnapStatus.AVAILABLE: 'available'>, version='24.04.4.1', revision='7187', channel='24.04/stable', publisher=Publisher(id='canonical', username='canonical', display_name='Canonical'))]
+2026-07-10 23:39:02,486 DEBUG root:38 finish: subiquity/Refresh/check_for_update: SUCCESS: new version of snap available: '24.04.4.1'
+2026-07-10 23:39:02,805 DEBUG urllib3.connectionpool:453 http://localhost:None "GET /v2/find?name=microk8s HTTP/1.1" 200 None
+2026-07-10 23:39:02,828 DEBUG root:38 finish: subiquity/SnapList/loader/fetch/microk8s: SUCCESS: 
+2026-07-10 23:39:02,828 DEBUG root:38 start: subiquity/SnapList/loader/fetch/nextcloud: 
+2026-07-10 23:39:03,237 DEBUG urllib3.connectionpool:453 http://localhost:None "GET /v2/find?name=nextcloud HTTP/1.1" 200 None
+2026-07-10 23:39:03,240 DEBUG root:38 finish: subiquity/SnapList/loader/fetch/nextcloud: SUCCESS: 
+2026-07-10 23:39:03,241 DEBUG root:38 start: subiquity/SnapList/loader/fetch/wekan: 
+2026-07-10 23:39:03,485 DEBUG urllib3.connectionpool:453 http://localhost:None "GET /v2/find?name=wekan HTTP/1.1" 200 None
+2026-07-10 23:39:03,486 DEBUG root:38 finish: subiquity/SnapList/loader/fetch/wekan: SUCCESS: 
+2026-07-10 23:39:03,486 DEBUG root:38 start: subiquity/SnapList/loader/fetch/canonical-livepatch: 
+2026-07-10 23:39:03,798 DEBUG urllib3.connectionpool:453 http://localhost:None "GET /v2/find?name=canonical-livepatch HTTP/1.1" 200 None
+2026-07-10 23:39:03,800 DEBUG root:38 finish: subiquity/SnapList/loader/fetch/canonical-livepatch: SUCCESS: 
+2026-07-10 23:39:03,800 DEBUG root:38 start: subiquity/SnapList/loader/fetch/rocketchat-server: 
+2026-07-10 23:39:03,919 DEBUG probert.multipath:48 Extracted multipath maps fields: ['ok']
+2026-07-10 23:39:03,919 DEBUG probert.multipath:52 Failed to parse multipath maps entry: ok: MMap.__new__() missing 2 required positional arguments: 'sysfs' and 'paths'
+2026-07-10 23:39:03,923 DEBUG probert.multipath:48 Extracted multipath paths fields: ['sda', '50026B7221044410', '[orphan]', '[undef]', 'ata-2.00', '[undef]', '[undef]', '[undef]']
+2026-07-10 23:39:04,022 DEBUG probert.dasd:134 Probing DASD devies
+2026-07-10 23:39:04,022 DEBUG probert.dasd:137 DASD devices only present on s390x, arch=x86_64
+2026-07-10 23:39:04,075 DEBUG urllib3.connectionpool:453 http://localhost:None "GET /v2/find?name=rocketchat-server HTTP/1.1" 200 None
+2026-07-10 23:39:04,076 DEBUG root:38 finish: subiquity/SnapList/loader/fetch/rocketchat-server: SUCCESS: 
+2026-07-10 23:39:04,077 DEBUG root:38 start: subiquity/SnapList/loader/fetch/mosquitto: 
+2026-07-10 23:39:04,151 DEBUG probert.utils:85 Command `/usr/sbin/ntfsresize --no-action --force --no-progress-bar --info /dev/sda4` exited with result: 0
+2026-07-10 23:39:04,151 DEBUG probert.utils:48 stdout: ------------------------------------------
+2026-07-10 23:39:04,151 DEBUG probert.utils:50 ntfsresize v2022.10.3 (libntfs-3g)
+2026-07-10 23:39:04,151 DEBUG probert.utils:50 Device name        : /dev/sda4
+2026-07-10 23:39:04,151 DEBUG probert.utils:50 NTFS volume version: 3.1
+2026-07-10 23:39:04,151 DEBUG probert.utils:50 Cluster size       : 4096 bytes
+2026-07-10 23:39:04,151 DEBUG probert.utils:50 Current volume size: 787476992 bytes (788 MB)
+2026-07-10 23:39:04,151 DEBUG probert.utils:50 Current device size: 787480576 bytes (788 MB)
+2026-07-10 23:39:04,151 DEBUG probert.utils:50 Checking filesystem consistency ...
+2026-07-10 23:39:04,152 DEBUG probert.utils:50 Accounting clusters ...
+2026-07-10 23:39:04,152 DEBUG probert.utils:50 Space in use       : 711 MB (90.2%)
+2026-07-10 23:39:04,152 DEBUG probert.utils:50 Collecting resizing constraints ...
+2026-07-10 23:39:04,152 DEBUG probert.utils:50 You might resize at 710455296 bytes or 711 MB (freeing 77 MB).
+2026-07-10 23:39:04,152 DEBUG probert.utils:50 Please make a test run using both the -n and -s options before real resizing!
+2026-07-10 23:39:04,152 DEBUG probert.utils:52 <empty stderr>
+2026-07-10 23:39:04,152 DEBUG probert.utils:88 --------------------------------------------------
+2026-07-10 23:39:04,513 DEBUG urllib3.connectionpool:453 http://localhost:None "GET /v2/find?name=mosquitto HTTP/1.1" 200 None
+2026-07-10 23:39:04,514 DEBUG root:38 finish: subiquity/SnapList/loader/fetch/mosquitto: SUCCESS: 
+2026-07-10 23:39:04,515 DEBUG root:38 start: subiquity/SnapList/loader/fetch/etcd: 
+2026-07-10 23:39:04,941 DEBUG urllib3.connectionpool:453 http://localhost:None "GET /v2/find?name=etcd HTTP/1.1" 200 None
+2026-07-10 23:39:04,942 DEBUG root:38 finish: subiquity/SnapList/loader/fetch/etcd: SUCCESS: 
+2026-07-10 23:39:04,942 DEBUG root:38 start: subiquity/SnapList/loader/fetch/powershell: 
+2026-07-10 23:39:05,000 DEBUG probert.utils:85 Command `/usr/sbin/dumpe2fs -h /dev/sdb4` exited with result: 0
+2026-07-10 23:39:05,000 DEBUG probert.utils:48 stdout: ------------------------------------------
+2026-07-10 23:39:05,000 DEBUG probert.utils:50 Filesystem volume name:   writable
+2026-07-10 23:39:05,000 DEBUG probert.utils:50 Last mounted on:          /root/var/crash
+2026-07-10 23:39:05,000 DEBUG probert.utils:50 Filesystem UUID:          007bdeff-7967-4c74-9d66-03eb9a6ae192
+2026-07-10 23:39:05,000 DEBUG probert.utils:50 Filesystem magic number:  0xEF53
+2026-07-10 23:39:05,000 DEBUG probert.utils:50 Filesystem revision #:    1 (dynamic)
+2026-07-10 23:39:05,000 DEBUG probert.utils:50 Filesystem features:      has_journal ext_attr resize_inode dir_index filetype needs_recovery extent 64bit flex_bg sparse_super large_file huge_file dir_nlink extra_isize metadata_csum
+2026-07-10 23:39:05,000 DEBUG probert.utils:50 Filesystem flags:         signed_directory_hash 
+2026-07-10 23:39:05,000 DEBUG probert.utils:50 Default mount options:    user_xattr acl
+2026-07-10 23:39:05,001 DEBUG probert.utils:50 Filesystem state:         clean
+2026-07-10 23:39:05,001 DEBUG probert.utils:50 Errors behavior:          Continue
+2026-07-10 23:39:05,001 DEBUG probert.utils:50 Filesystem OS type:       Linux
+2026-07-10 23:39:05,001 DEBUG probert.utils:50 Inode count:              281120
+2026-07-10 23:39:05,001 DEBUG probert.utils:50 Block count:              1124096
+2026-07-10 23:39:05,001 DEBUG probert.utils:50 Reserved block count:     56204
+2026-07-10 23:39:05,001 DEBUG probert.utils:50 Overhead clusters:        38424
+2026-07-10 23:39:05,001 DEBUG probert.utils:50 Free blocks:              1085666
+2026-07-10 23:39:05,001 DEBUG probert.utils:50 Free inodes:              281109
+2026-07-10 23:39:05,001 DEBUG probert.utils:50 First block:              0
+2026-07-10 23:39:05,001 DEBUG probert.utils:50 Block size:               4096
+2026-07-10 23:39:05,001 DEBUG probert.utils:50 Fragment size:            4096
+2026-07-10 23:39:05,002 DEBUG probert.utils:50 Group descriptor size:    64
+2026-07-10 23:39:05,002 DEBUG probert.utils:50 Reserved GDT blocks:      548
+2026-07-10 23:39:05,002 DEBUG probert.utils:50 Blocks per group:         32768
+2026-07-10 23:39:05,002 DEBUG probert.utils:50 Fragments per group:      32768
+2026-07-10 23:39:05,002 DEBUG probert.utils:50 Inodes per group:         8032
+2026-07-10 23:39:05,002 DEBUG probert.utils:50 Inode blocks per group:   502
+2026-07-10 23:39:05,002 DEBUG probert.utils:50 Flex block group size:    16
+2026-07-10 23:39:05,002 DEBUG probert.utils:50 Filesystem created:       Fri Jul 10 23:38:16 2026
+2026-07-10 23:39:05,002 DEBUG probert.utils:50 Last mount time:          Fri Jul 10 23:38:34 2026
+2026-07-10 23:39:05,002 DEBUG probert.utils:50 Last write time:          Fri Jul 10 23:38:34 2026
+2026-07-10 23:39:05,002 DEBUG probert.utils:50 Mount count:              1
+2026-07-10 23:39:05,002 DEBUG probert.utils:50 Maximum mount count:      -1
+2026-07-10 23:39:05,002 DEBUG probert.utils:50 Last checked:             Fri Jul 10 23:38:16 2026
+2026-07-10 23:39:05,003 DEBUG probert.utils:50 Check interval:           0 (<none>)
+2026-07-10 23:39:05,003 DEBUG probert.utils:50 Lifetime writes:          2225 kB
+2026-07-10 23:39:05,003 DEBUG probert.utils:50 Reserved blocks uid:      0 (user root)
+2026-07-10 23:39:05,003 DEBUG probert.utils:50 Reserved blocks gid:      0 (group root)
+2026-07-10 23:39:05,003 DEBUG probert.utils:50 First inode:              11
+2026-07-10 23:39:05,003 DEBUG probert.utils:50 Inode size:	          256
+2026-07-10 23:39:05,003 DEBUG probert.utils:50 Required extra isize:     32
+2026-07-10 23:39:05,003 DEBUG probert.utils:50 Desired extra isize:      32
+2026-07-10 23:39:05,003 DEBUG probert.utils:50 Journal inode:            8
+2026-07-10 23:39:05,003 DEBUG probert.utils:50 Default directory hash:   half_md4
+2026-07-10 23:39:05,003 DEBUG probert.utils:50 Directory Hash Seed:      2a7f6631-f20d-4735-95e9-6e9260d96f7c
+2026-07-10 23:39:05,003 DEBUG probert.utils:50 Journal backup:           inode blocks
+2026-07-10 23:39:05,003 DEBUG probert.utils:50 Checksum type:            crc32c
+2026-07-10 23:39:05,004 DEBUG probert.utils:50 Checksum:                 0xa88496c6
+2026-07-10 23:39:05,004 DEBUG probert.utils:50 Journal features:         journal_64bit journal_checksum_v3
+2026-07-10 23:39:05,004 DEBUG probert.utils:50 Total journal size:       64M
+2026-07-10 23:39:05,004 DEBUG probert.utils:50 Total journal blocks:     16384
+2026-07-10 23:39:05,004 DEBUG probert.utils:50 Max transaction length:   16384
+2026-07-10 23:39:05,004 DEBUG probert.utils:50 Fast commit length:       0
+2026-07-10 23:39:05,004 DEBUG probert.utils:50 Journal sequence:         0x00000002
+2026-07-10 23:39:05,004 DEBUG probert.utils:50 Journal start:            1
+2026-07-10 23:39:05,004 DEBUG probert.utils:50 Journal checksum type:    crc32c
+2026-07-10 23:39:05,004 DEBUG probert.utils:50 Journal checksum:         0x7938ea8e
+2026-07-10 23:39:05,004 DEBUG probert.utils:50 
+2026-07-10 23:39:05,004 DEBUG probert.utils:48 stderr: ------------------------------------------
+2026-07-10 23:39:05,005 DEBUG probert.utils:50 dumpe2fs 1.47.0 (5-Feb-2023)
+2026-07-10 23:39:05,005 DEBUG probert.utils:88 --------------------------------------------------
+2026-07-10 23:39:05,106 DEBUG urllib3.connectionpool:453 http://localhost:None "GET /v2/find?name=powershell HTTP/1.1" 200 None
+2026-07-10 23:39:05,108 DEBUG root:38 finish: subiquity/SnapList/loader/fetch/powershell: SUCCESS: 
+2026-07-10 23:39:05,108 DEBUG root:38 start: subiquity/SnapList/loader/fetch/sabnzbd: 
+2026-07-10 23:39:05,284 DEBUG urllib3.connectionpool:453 http://localhost:None "GET /v2/find?name=sabnzbd HTTP/1.1" 200 None
+2026-07-10 23:39:05,285 DEBUG root:38 finish: subiquity/SnapList/loader/fetch/sabnzbd: SUCCESS: 
+2026-07-10 23:39:05,285 DEBUG root:38 start: subiquity/SnapList/loader/fetch/wormhole: 
+2026-07-10 23:39:05,421 DEBUG probert.utils:85 Command `/usr/sbin/resize2fs -P /dev/sdb4` exited with result: 0
+2026-07-10 23:39:05,421 DEBUG probert.utils:48 stdout: ------------------------------------------
+2026-07-10 23:39:05,421 DEBUG probert.utils:50 Estimated minimum size of the filesystem: 27803
+2026-07-10 23:39:05,421 DEBUG probert.utils:48 stderr: ------------------------------------------
+2026-07-10 23:39:05,421 DEBUG probert.utils:50 resize2fs 1.47.0 (5-Feb-2023)
+2026-07-10 23:39:05,421 DEBUG probert.utils:88 --------------------------------------------------
+2026-07-10 23:39:05,449 DEBUG urllib3.connectionpool:453 http://localhost:None "GET /v2/find?name=wormhole HTTP/1.1" 200 None
+2026-07-10 23:39:05,450 DEBUG root:38 finish: subiquity/SnapList/loader/fetch/wormhole: SUCCESS: 
+2026-07-10 23:39:05,450 DEBUG root:38 start: subiquity/SnapList/loader/fetch/aws-cli: 
+2026-07-10 23:39:05,672 DEBUG urllib3.connectionpool:453 http://localhost:None "GET /v2/find?name=aws-cli HTTP/1.1" 200 None
+2026-07-10 23:39:05,673 DEBUG root:38 finish: subiquity/SnapList/loader/fetch/aws-cli: SUCCESS: 
+2026-07-10 23:39:05,673 DEBUG root:38 start: subiquity/SnapList/loader/fetch/slcli: 
+2026-07-10 23:39:05,867 DEBUG urllib3.connectionpool:453 http://localhost:None "GET /v2/find?name=slcli HTTP/1.1" 200 None
+2026-07-10 23:39:05,868 DEBUG root:38 finish: subiquity/SnapList/loader/fetch/slcli: SUCCESS: 
+2026-07-10 23:39:05,869 DEBUG root:38 start: subiquity/SnapList/loader/fetch/doctl: 
+2026-07-10 23:39:06,069 DEBUG urllib3.connectionpool:453 http://localhost:None "GET /v2/find?name=doctl HTTP/1.1" 200 None
+2026-07-10 23:39:06,070 DEBUG root:38 finish: subiquity/SnapList/loader/fetch/doctl: SUCCESS: 
+2026-07-10 23:39:06,071 DEBUG root:38 start: subiquity/SnapList/loader/fetch/keepalived: 
+2026-07-10 23:39:06,235 DEBUG urllib3.connectionpool:453 http://localhost:None "GET /v2/find?name=keepalived HTTP/1.1" 200 None
+2026-07-10 23:39:06,237 DEBUG root:38 finish: subiquity/SnapList/loader/fetch/keepalived: SUCCESS: 
+2026-07-10 23:39:06,237 DEBUG root:38 start: subiquity/SnapList/loader/fetch/prometheus: 
+2026-07-10 23:39:06,442 DEBUG urllib3.connectionpool:453 http://localhost:None "GET /v2/find?name=prometheus HTTP/1.1" 200 None
+2026-07-10 23:39:06,444 DEBUG root:38 finish: subiquity/SnapList/loader/fetch/prometheus: SUCCESS: 
+2026-07-10 23:39:06,444 DEBUG root:38 start: subiquity/SnapList/loader/fetch/lxd: 
+2026-07-10 23:39:06,693 DEBUG urllib3.connectionpool:453 http://localhost:None "GET /v2/find?name=lxd HTTP/1.1" 200 None
+2026-07-10 23:39:06,695 DEBUG root:38 finish: subiquity/SnapList/loader/fetch/lxd: SUCCESS: 
+2026-07-10 23:39:06,695 DEBUG root:38 finish: subiquity/SnapList/loader: SUCCESS: 
+2026-07-10 23:39:08,378 DEBUG probert.utils:85 Command `/usr/sbin/ntfsresize --no-action --force --no-progress-bar --info /dev/sda3` exited with result: 0
+2026-07-10 23:39:08,378 DEBUG probert.utils:48 stdout: ------------------------------------------
+2026-07-10 23:39:08,378 DEBUG probert.utils:50 ntfsresize v2022.10.3 (libntfs-3g)
+2026-07-10 23:39:08,378 DEBUG probert.utils:50 Device name        : /dev/sda3
+2026-07-10 23:39:08,378 DEBUG probert.utils:50 NTFS volume version: 3.1
+2026-07-10 23:39:08,378 DEBUG probert.utils:50 Cluster size       : 4096 bytes
+2026-07-10 23:39:08,378 DEBUG probert.utils:50 Current volume size: 59001270784 bytes (59002 MB)
+2026-07-10 23:39:08,379 DEBUG probert.utils:50 Current device size: 59001274368 bytes (59002 MB)
+2026-07-10 23:39:08,379 DEBUG probert.utils:50 Checking filesystem consistency ...
+2026-07-10 23:39:08,379 DEBUG probert.utils:50 Accounting clusters ...
+2026-07-10 23:39:08,379 DEBUG probert.utils:50 Space in use       : 51970 MB (88.1%)
+2026-07-10 23:39:08,379 DEBUG probert.utils:50 Collecting resizing constraints ...
+2026-07-10 23:39:08,379 DEBUG probert.utils:50 You might resize at 51969110016 bytes or 51970 MB (freeing 7032 MB).
+2026-07-10 23:39:08,379 DEBUG probert.utils:50 Please make a test run using both the -n and -s options before real resizing!
+2026-07-10 23:39:08,379 DEBUG probert.utils:52 <empty stderr>
+2026-07-10 23:39:08,379 DEBUG probert.utils:88 --------------------------------------------------
+2026-07-10 23:39:08,382 DEBUG curtin:1445 Extracting storage config from probe data
+2026-07-10 23:39:08,382 DEBUG curtin:73 /dev/sdb is multipath device member? False
+2026-07-10 23:39:08,382 DEBUG curtin:86 /dev/sdb is multipath device partition? False
+2026-07-10 23:39:08,382 DEBUG curtin:61 /dev/sdb is multipath device? False
+2026-07-10 23:39:08,382 DEBUG curtin:86 /dev/sdb is multipath device partition? False
+2026-07-10 23:39:08,382 DEBUG curtin:61 /dev/sdb is multipath device? False
+2026-07-10 23:39:08,396 DEBUG curtin:73 /dev/sdb1 is multipath device member? False
+2026-07-10 23:39:08,396 DEBUG curtin:86 /dev/sdb1 is multipath device partition? False
+2026-07-10 23:39:08,396 DEBUG curtin:61 /dev/sdb1 is multipath device? False
+2026-07-10 23:39:08,396 DEBUG curtin:86 /dev/sdb1 is multipath device partition? False
+2026-07-10 23:39:08,396 DEBUG curtin:86 /dev/sdb1 is multipath device partition? False
+2026-07-10 23:39:08,408 DEBUG curtin:73 /dev/sdb2 is multipath device member? False
+2026-07-10 23:39:08,408 DEBUG curtin:86 /dev/sdb2 is multipath device partition? False
+2026-07-10 23:39:08,408 DEBUG curtin:61 /dev/sdb2 is multipath device? False
+2026-07-10 23:39:08,408 DEBUG curtin:86 /dev/sdb2 is multipath device partition? False
+2026-07-10 23:39:08,408 DEBUG curtin:86 /dev/sdb2 is multipath device partition? False
+2026-07-10 23:39:08,420 DEBUG curtin:73 /dev/sdb3 is multipath device member? False
+2026-07-10 23:39:08,420 DEBUG curtin:86 /dev/sdb3 is multipath device partition? False
+2026-07-10 23:39:08,420 DEBUG curtin:61 /dev/sdb3 is multipath device? False
+2026-07-10 23:39:08,421 DEBUG curtin:86 /dev/sdb3 is multipath device partition? False
+2026-07-10 23:39:08,421 DEBUG curtin:86 /dev/sdb3 is multipath device partition? False
+2026-07-10 23:39:08,432 DEBUG curtin:73 /dev/sdb4 is multipath device member? False
+2026-07-10 23:39:08,432 DEBUG curtin:86 /dev/sdb4 is multipath device partition? False
+2026-07-10 23:39:08,432 DEBUG curtin:61 /dev/sdb4 is multipath device? False
+2026-07-10 23:39:08,432 DEBUG curtin:86 /dev/sdb4 is multipath device partition? False
+2026-07-10 23:39:08,432 DEBUG curtin:86 /dev/sdb4 is multipath device partition? False
+2026-07-10 23:39:08,444 DEBUG curtin:73 /dev/sda is multipath device member? False
+2026-07-10 23:39:08,444 DEBUG curtin:86 /dev/sda is multipath device partition? False
+2026-07-10 23:39:08,444 DEBUG curtin:61 /dev/sda is multipath device? False
+2026-07-10 23:39:08,444 DEBUG curtin:86 /dev/sda is multipath device partition? False
+2026-07-10 23:39:08,444 DEBUG curtin:61 /dev/sda is multipath device? False
+2026-07-10 23:39:08,456 DEBUG curtin:73 /dev/sda1 is multipath device member? False
+2026-07-10 23:39:08,456 DEBUG curtin:86 /dev/sda1 is multipath device partition? False
+2026-07-10 23:39:08,456 DEBUG curtin:61 /dev/sda1 is multipath device? False
+2026-07-10 23:39:08,456 DEBUG curtin:86 /dev/sda1 is multipath device partition? False
+2026-07-10 23:39:08,456 DEBUG curtin:86 /dev/sda1 is multipath device partition? False
+2026-07-10 23:39:08,468 DEBUG curtin:73 /dev/sda2 is multipath device member? False
+2026-07-10 23:39:08,468 DEBUG curtin:86 /dev/sda2 is multipath device partition? False
+2026-07-10 23:39:08,468 DEBUG curtin:61 /dev/sda2 is multipath device? False
+2026-07-10 23:39:08,468 DEBUG curtin:86 /dev/sda2 is multipath device partition? False
+2026-07-10 23:39:08,468 DEBUG curtin:86 /dev/sda2 is multipath device partition? False
+2026-07-10 23:39:08,480 DEBUG curtin:73 /dev/sda3 is multipath device member? False
+2026-07-10 23:39:08,480 DEBUG curtin:86 /dev/sda3 is multipath device partition? False
+2026-07-10 23:39:08,480 DEBUG curtin:61 /dev/sda3 is multipath device? False
+2026-07-10 23:39:08,480 DEBUG curtin:86 /dev/sda3 is multipath device partition? False
+2026-07-10 23:39:08,480 DEBUG curtin:86 /dev/sda3 is multipath device partition? False
+2026-07-10 23:39:08,491 DEBUG curtin:73 /dev/sda4 is multipath device member? False
+2026-07-10 23:39:08,491 DEBUG curtin:86 /dev/sda4 is multipath device partition? False
+2026-07-10 23:39:08,492 DEBUG curtin:61 /dev/sda4 is multipath device? False
+2026-07-10 23:39:08,492 DEBUG curtin:86 /dev/sda4 is multipath device partition? False
+2026-07-10 23:39:08,492 DEBUG curtin:86 /dev/sda4 is multipath device partition? False
+2026-07-10 23:39:08,504 DEBUG curtin:73 /dev/sdb is multipath device member? False
+2026-07-10 23:39:08,515 DEBUG curtin:73 /dev/sdb1 is multipath device member? False
+2026-07-10 23:39:08,527 DEBUG curtin:73 /dev/sdb2 is multipath device member? False
+2026-07-10 23:39:08,538 DEBUG curtin:73 /dev/sda is multipath device member? False
+2026-07-10 23:39:08,550 DEBUG curtin:73 /dev/sda1 is multipath device member? False
+2026-07-10 23:39:08,562 DEBUG curtin:73 /dev/sda4 is multipath device member? False
+2026-07-10 23:39:08,573 DEBUG curtin:73 /dev/sdb4 is multipath device member? False
+2026-07-10 23:39:08,585 DEBUG curtin:73 /dev/sda3 is multipath device member? False
+2026-07-10 23:39:08,609 DEBUG curtin:1452 Sorting extracted configurations
+2026-07-10 23:39:08,609 INFO curtin:1472 Validating extracted storage config components
+2026-07-10 23:39:08,635 DEBUG curtin:1489 Extracted (unmerged) storage config:
+storage:
+-   id: disk-sdb
+    path: /dev/sdb
+    ptable: gpt
+    serial: Kingston_DataTraveler_G3_001CC0EC33B0FBB0A70C2400-0:0
+    type: disk
+-   id: disk-sda
+    path: /dev/sda
+    ptable: gpt
+    serial: KINGSTON_SVP200S360G_50026B7221044410
+    type: disk
+    wwn: '0x50026b7221044410'
+-   device: disk-sdb
+    id: partition-sdb1
+    number: 1
+    offset: 32768
+    partition_type: ebd0a0a2-b9e5-4433-87c0-68b6b72699c7
+    path: /dev/sdb1
+    size: 3399895040
+    type: partition
+    uuid: e31cd2b7-3ec9-4171-9685-7f881c25604d
+-   device: disk-sdb
+    flag: boot
+    id: partition-sdb2
+    number: 2
+    offset: 3399927808
+    partition_type: c12a7328-f81f-11d2-ba4b-00a0c93ec93b
+    path: /dev/sdb2
+    size: 5201920
+    type: partition
+    uuid: e31cd2b7-3ec9-4171-9686-7f881c25604d
+-   device: disk-sdb
+    id: partition-sdb3
+    number: 3
+    offset: 3405129728
+    partition_type: ebd0a0a2-b9e5-4433-87c0-68b6b72699c7
+    path: /dev/sdb3
+    size: 307200
+    type: partition
+    uuid: e31cd2b7-3ec9-4171-9687-7f881c25604d
+-   device: disk-sdb
+    flag: linux
+    id: partition-sdb4
+    number: 4
+    offset: 3405774848
+    partition_type: 0fc63daf-8483-4772-8e79-3d69d8477de4
+    path: /dev/sdb4
+    size: 4604297216
+    type: partition
+    uuid: e2e36e73-a0b3-4258-9f10-bf563f866155
+-   device: disk-sda
+    flag: boot
+    id: partition-sda1
+    number: 1
+    offset: 1048576
+    partition_type: c12a7328-f81f-11d2-ba4b-00a0c93ec93b
+    path: /dev/sda1
+    size: 209715200
+    type: partition
+    uuid: 117e06db-4574-4ff4-b10d-599a271e2b08
+-   device: disk-sda
+    flag: msftres
+    id: partition-sda2
+    number: 2
+    offset: 210763776
+    partition_type: e3c9e316-0b5c-4db8-817d-f92df00215ae
+    path: /dev/sda2
+    size: 16777216
+    type: partition
+    uuid: 5940c2f9-2025-4fc0-ac06-9c45b23952a0
+-   device: disk-sda
+    id: partition-sda3
+    number: 3
+    offset: 227540992
+    partition_type: ebd0a0a2-b9e5-4433-87c0-68b6b72699c7
+    path: /dev/sda3
+    size: 59001274368
+    type: partition
+    uuid: 54f8424e-561d-40f6-9fdd-e40f6aa782a6
+-   device: disk-sda
+    id: partition-sda4
+    number: 4
+    offset: 59228815360
+    partition_type: de94bba4-06d1-4d40-a16a-bfd50179d6ac
+    path: /dev/sda4
+    size: 787480576
+    type: partition
+    uuid: 6d385187-3a42-4fb8-b8f8-53a07a177703
+-   fstype: iso9660
+    id: format-disk-sdb
+    type: format
+    volume: disk-sdb
+-   fstype: iso9660
+    id: format-partition-sdb1
+    type: format
+    volume: partition-sdb1
+-   fstype: vfat
+    id: format-partition-sdb2
+    type: format
+    volume: partition-sdb2
+-   fstype: zfs_member
+    id: format-disk-sda
+    preserve: true
+    type: format
+    volume: disk-sda
+-   fstype: vfat
+    id: format-partition-sda1
+    type: format
+    volume: partition-sda1
+-   fstype: ntfs
+    id: format-partition-sda4
+    type: format
+    volume: partition-sda4
+-   fstype: ext4
+    id: format-partition-sdb4
+    type: format
+    uuid: 007bdeff-7967-4c74-9d66-03eb9a6ae192
+    volume: partition-sdb4
+-   fstype: ntfs
+    id: format-partition-sda3
+    type: format
+    volume: partition-sda3
+-   device: format-partition-sdb1
+    id: mount-partition-sdb1
+    path: /cdrom
+    type: mount
+
+2026-07-10 23:39:08,635 DEBUG curtin:1493 Generating storage config dependencies
+2026-07-10 23:39:08,635 DEBUG curtin:244 Validate: partition-sdb1:SourceType:partition -> (DepId:disk-sdb DepType:disk) in SourceDeps:{'partition', 'disk', 'bcache', 'raid'} ? result=True
+2026-07-10 23:39:08,635 DEBUG curtin:244 Validate: partition-sdb2:SourceType:partition -> (DepId:disk-sdb DepType:disk) in SourceDeps:{'partition', 'disk', 'bcache', 'raid'} ? result=True
+2026-07-10 23:39:08,635 DEBUG curtin:244 Validate: partition-sdb3:SourceType:partition -> (DepId:disk-sdb DepType:disk) in SourceDeps:{'partition', 'disk', 'bcache', 'raid'} ? result=True
+2026-07-10 23:39:08,635 DEBUG curtin:244 Validate: partition-sdb4:SourceType:partition -> (DepId:disk-sdb DepType:disk) in SourceDeps:{'partition', 'disk', 'bcache', 'raid'} ? result=True
+2026-07-10 23:39:08,635 DEBUG curtin:244 Validate: partition-sda1:SourceType:partition -> (DepId:disk-sda DepType:disk) in SourceDeps:{'partition', 'disk', 'bcache', 'raid'} ? result=True
+2026-07-10 23:39:08,635 DEBUG curtin:244 Validate: partition-sda2:SourceType:partition -> (DepId:disk-sda DepType:disk) in SourceDeps:{'partition', 'disk', 'bcache', 'raid'} ? result=True
+2026-07-10 23:39:08,635 DEBUG curtin:244 Validate: partition-sda3:SourceType:partition -> (DepId:disk-sda DepType:disk) in SourceDeps:{'partition', 'disk', 'bcache', 'raid'} ? result=True
+2026-07-10 23:39:08,635 DEBUG curtin:244 Validate: partition-sda4:SourceType:partition -> (DepId:disk-sda DepType:disk) in SourceDeps:{'partition', 'disk', 'bcache', 'raid'} ? result=True
+2026-07-10 23:39:08,635 DEBUG curtin:244 Validate: format-disk-sdb:SourceType:format -> (DepId:disk-sdb DepType:disk) in SourceDeps:{'dm_crypt', 'lvm_partition', 'partition', 'disk', 'bcache', 'raid'} ? result=True
+2026-07-10 23:39:08,635 DEBUG curtin:244 Validate: format-partition-sdb1:SourceType:format -> (DepId:partition-sdb1 DepType:partition) in SourceDeps:{'dm_crypt', 'lvm_partition', 'partition', 'disk', 'bcache', 'raid'} ? result=True
+2026-07-10 23:39:08,636 DEBUG curtin:244 Validate: partition-sdb1:SourceType:partition -> (DepId:disk-sdb DepType:disk) in SourceDeps:{'partition', 'disk', 'bcache', 'raid'} ? result=True
+2026-07-10 23:39:08,636 DEBUG curtin:244 Validate: format-partition-sdb2:SourceType:format -> (DepId:partition-sdb2 DepType:partition) in SourceDeps:{'dm_crypt', 'lvm_partition', 'partition', 'disk', 'bcache', 'raid'} ? result=True
+2026-07-10 23:39:08,636 DEBUG curtin:244 Validate: partition-sdb2:SourceType:partition -> (DepId:disk-sdb DepType:disk) in SourceDeps:{'partition', 'disk', 'bcache', 'raid'} ? result=True
+2026-07-10 23:39:08,636 DEBUG curtin:244 Validate: format-disk-sda:SourceType:format -> (DepId:disk-sda DepType:disk) in SourceDeps:{'dm_crypt', 'lvm_partition', 'partition', 'disk', 'bcache', 'raid'} ? result=True
+2026-07-10 23:39:08,636 DEBUG curtin:244 Validate: format-partition-sda1:SourceType:format -> (DepId:partition-sda1 DepType:partition) in SourceDeps:{'dm_crypt', 'lvm_partition', 'partition', 'disk', 'bcache', 'raid'} ? result=True
+2026-07-10 23:39:08,636 DEBUG curtin:244 Validate: partition-sda1:SourceType:partition -> (DepId:disk-sda DepType:disk) in SourceDeps:{'partition', 'disk', 'bcache', 'raid'} ? result=True
+2026-07-10 23:39:08,636 DEBUG curtin:244 Validate: format-partition-sda4:SourceType:format -> (DepId:partition-sda4 DepType:partition) in SourceDeps:{'dm_crypt', 'lvm_partition', 'partition', 'disk', 'bcache', 'raid'} ? result=True
+2026-07-10 23:39:08,636 DEBUG curtin:244 Validate: partition-sda4:SourceType:partition -> (DepId:disk-sda DepType:disk) in SourceDeps:{'partition', 'disk', 'bcache', 'raid'} ? result=True
+2026-07-10 23:39:08,636 DEBUG curtin:244 Validate: format-partition-sdb4:SourceType:format -> (DepId:partition-sdb4 DepType:partition) in SourceDeps:{'dm_crypt', 'lvm_partition', 'partition', 'disk', 'bcache', 'raid'} ? result=True
+2026-07-10 23:39:08,636 DEBUG curtin:244 Validate: partition-sdb4:SourceType:partition -> (DepId:disk-sdb DepType:disk) in SourceDeps:{'partition', 'disk', 'bcache', 'raid'} ? result=True
+2026-07-10 23:39:08,636 DEBUG curtin:244 Validate: format-partition-sda3:SourceType:format -> (DepId:partition-sda3 DepType:partition) in SourceDeps:{'dm_crypt', 'lvm_partition', 'partition', 'disk', 'bcache', 'raid'} ? result=True
+2026-07-10 23:39:08,636 DEBUG curtin:244 Validate: partition-sda3:SourceType:partition -> (DepId:disk-sda DepType:disk) in SourceDeps:{'partition', 'disk', 'bcache', 'raid'} ? result=True
+2026-07-10 23:39:08,636 DEBUG curtin:244 Validate: mount-partition-sdb1:SourceType:mount -> (DepId:format-partition-sdb1 DepType:format) in SourceDeps:{'format'} ? result=True
+2026-07-10 23:39:08,636 DEBUG curtin:244 Validate: format-partition-sdb1:SourceType:format -> (DepId:partition-sdb1 DepType:partition) in SourceDeps:{'dm_crypt', 'lvm_partition', 'partition', 'disk', 'bcache', 'raid'} ? result=True
+2026-07-10 23:39:08,636 DEBUG curtin:244 Validate: partition-sdb1:SourceType:partition -> (DepId:disk-sdb DepType:disk) in SourceDeps:{'partition', 'disk', 'bcache', 'raid'} ? result=True
+2026-07-10 23:39:08,636 DEBUG curtin:1499 Merging storage config dependencies
+2026-07-10 23:39:08,644 DEBUG curtin:1504 Merged storage config:
+storage:
+    config:
+    -   id: disk-sda
+        path: /dev/sda
+        ptable: gpt
+        serial: KINGSTON_SVP200S360G_50026B7221044410
+        type: disk
+        wwn: '0x50026b7221044410'
+    -   id: disk-sdb
+        path: /dev/sdb
+        ptable: gpt
+        serial: Kingston_DataTraveler_G3_001CC0EC33B0FBB0A70C2400-0:0
+        type: disk
+    -   fstype: zfs_member
+        id: format-disk-sda
+        preserve: true
+        type: format
+        volume: disk-sda
+    -   fstype: iso9660
+        id: format-disk-sdb
+        type: format
+        volume: disk-sdb
+    -   device: disk-sdb
+        id: partition-sdb1
+        number: 1
+        offset: 32768
+        partition_type: ebd0a0a2-b9e5-4433-87c0-68b6b72699c7
+        path: /dev/sdb1
+        size: 3399895040
+        type: partition
+        uuid: e31cd2b7-3ec9-4171-9685-7f881c25604d
+    -   device: disk-sda
+        flag: boot
+        id: partition-sda1
+        number: 1
+        offset: 1048576
+        partition_type: c12a7328-f81f-11d2-ba4b-00a0c93ec93b
+        path: /dev/sda1
+        size: 209715200
+        type: partition
+        uuid: 117e06db-4574-4ff4-b10d-599a271e2b08
+    -   device: disk-sdb
+        flag: boot
+        id: partition-sdb2
+        number: 2
+        offset: 3399927808
+        partition_type: c12a7328-f81f-11d2-ba4b-00a0c93ec93b
+        path: /dev/sdb2
+        size: 5201920
+        type: partition
+        uuid: e31cd2b7-3ec9-4171-9686-7f881c25604d
+    -   device: disk-sda
+        flag: msftres
+        id: partition-sda2
+        number: 2
+        offset: 210763776
+        partition_type: e3c9e316-0b5c-4db8-817d-f92df00215ae
+        path: /dev/sda2
+        size: 16777216
+        type: partition
+        uuid: 5940c2f9-2025-4fc0-ac06-9c45b23952a0
+    -   device: disk-sdb
+        id: partition-sdb3
+        number: 3
+        offset: 3405129728
+        partition_type: ebd0a0a2-b9e5-4433-87c0-68b6b72699c7
+        path: /dev/sdb3
+        size: 307200
+        type: partition
+        uuid: e31cd2b7-3ec9-4171-9687-7f881c25604d
+    -   device: disk-sda
+        id: partition-sda3
+        number: 3
+        offset: 227540992
+        partition_type: ebd0a0a2-b9e5-4433-87c0-68b6b72699c7
+        path: /dev/sda3
+        size: 59001274368
+        type: partition
+        uuid: 54f8424e-561d-40f6-9fdd-e40f6aa782a6
+    -   device: disk-sdb
+        flag: linux
+        id: partition-sdb4
+        number: 4
+        offset: 3405774848
+        partition_type: 0fc63daf-8483-4772-8e79-3d69d8477de4
+        path: /dev/sdb4
+        size: 4604297216
+        type: partition
+        uuid: e2e36e73-a0b3-4258-9f10-bf563f866155
+    -   device: disk-sda
+        id: partition-sda4
+        number: 4
+        offset: 59228815360
+        partition_type: de94bba4-06d1-4d40-a16a-bfd50179d6ac
+        path: /dev/sda4
+        size: 787480576
+        type: partition
+        uuid: 6d385187-3a42-4fb8-b8f8-53a07a177703
+    -   fstype: vfat
+        id: format-partition-sda1
+        type: format
+        volume: partition-sda1
+    -   fstype: ntfs
+        id: format-partition-sda3
+        type: format
+        volume: partition-sda3
+    -   fstype: ntfs
+        id: format-partition-sda4
+        type: format
+        volume: partition-sda4
+    -   fstype: iso9660
+        id: format-partition-sdb1
+        type: format
+        volume: partition-sdb1
+    -   fstype: vfat
+        id: format-partition-sdb2
+        type: format
+        volume: partition-sdb2
+    -   fstype: ext4
+        id: format-partition-sdb4
+        type: format
+        uuid: 007bdeff-7967-4c74-9d66-03eb9a6ae192
+        volume: partition-sdb4
+    -   device: format-partition-sdb1
+        id: mount-partition-sdb1
+        path: /cdrom
+        type: mount
+    version: 2
+
+2026-07-10 23:39:08,644 DEBUG subiquity.models.filesystem:1621 majmin_to_dev {'8:0': Disk(ptable='gpt', serial='KINGSTON_SVP200S360G_50026B7221044410', wwn='0x50026b7221044410', path='/dev/sda', preserve=True, id='disk-sda', type='disk'), '8:16': Disk(ptable='gpt', serial='Kingston_DataTraveler_G3_001CC0EC33B0FBB0A70C2400-0:0', path='/dev/sdb', preserve=True, id='disk-sdb', type='disk'), '8:17': Partition(device=disk-sdb, size=3399895040, number=1, preserve=True, offset=32768, partition_type='ebd0a0a2-b9e5-4433-87c0-68b6b72699c7', path='/dev/sdb1', uuid='e31cd2b7-3ec9-4171-9685-7f881c25604d', id='partition-sdb1', type='partition'), '8:1': Partition(device=disk-sda, size=209715200, flag='boot', number=1, preserve=True, offset=1048576, partition_type='c12a7328-f81f-11d2-ba4b-00a0c93ec93b', path='/dev/sda1', uuid='117e06db-4574-4ff4-b10d-599a271e2b08', id='partition-sda1', type='partition'), '8:18': Partition(device=disk-sdb, size=5201920, flag='boot', number=2, preserve=True, offset=3399927808, partition_type='c12a7328-f81f-11d2-ba4b-00a0c93ec93b', path='/dev/sdb2', uuid='e31cd2b7-3ec9-4171-9686-7f881c25604d', id='partition-sdb2', type='partition'), '8:2': Partition(device=disk-sda, size=16777216, flag='msftres', number=2, preserve=True, offset=210763776, partition_type='e3c9e316-0b5c-4db8-817d-f92df00215ae', path='/dev/sda2', uuid='5940c2f9-2025-4fc0-ac06-9c45b23952a0', id='partition-sda2', type='partition'), '8:19': Partition(device=disk-sdb, size=307200, number=3, preserve=True, offset=3405129728, partition_type='ebd0a0a2-b9e5-4433-87c0-68b6b72699c7', path='/dev/sdb3', uuid='e31cd2b7-3ec9-4171-9687-7f881c25604d', id='partition-sdb3', type='partition'), '8:3': Partition(device=disk-sda, size=59001274368, number=3, preserve=True, offset=227540992, partition_type='ebd0a0a2-b9e5-4433-87c0-68b6b72699c7', path='/dev/sda3', uuid='54f8424e-561d-40f6-9fdd-e40f6aa782a6', id='partition-sda3', type='partition'), '8:20': Partition(device=disk-sdb, size=4604297216, flag='linux', number=4, preserve=True, offset=3405774848, partition_type='0fc63daf-8483-4772-8e79-3d69d8477de4', path='/dev/sdb4', uuid='e2e36e73-a0b3-4258-9f10-bf563f866155', id='partition-sdb4', type='partition'), '8:4': Partition(device=disk-sda, size=787480576, number=4, preserve=True, offset=59228815360, partition_type='de94bba4-06d1-4d40-a16a-bfd50179d6ac', path='/dev/sda4', uuid='6d385187-3a42-4fb8-b8f8-53a07a177703', id='partition-sda4', type='partition')}
+2026-07-10 23:39:08,644 DEBUG subiquity.models.filesystem:1633 considering mount of 0:29
+2026-07-10 23:39:08,644 DEBUG subiquity.models.filesystem:1633 considering mount of 0:23
+2026-07-10 23:39:08,644 DEBUG subiquity.models.filesystem:1633 considering mount of 0:24
+2026-07-10 23:39:08,644 DEBUG subiquity.models.filesystem:1633 considering mount of 0:5
+2026-07-10 23:39:08,644 DEBUG subiquity.models.filesystem:1633 considering mount of 0:26
+2026-07-10 23:39:08,645 DEBUG subiquity.models.filesystem:1633 considering mount of 8:17
+2026-07-10 23:39:08,645 DEBUG subiquity.models.filesystem:1638 /dev/sdb1 is mounted
+2026-07-10 23:39:08,645 DEBUG subiquity.models.filesystem:1633 considering mount of 7:0
+2026-07-10 23:39:08,645 DEBUG subiquity.models.filesystem:1633 considering mount of 8:20
+2026-07-10 23:39:08,645 DEBUG subiquity.models.filesystem:1638 /dev/sdb4 is mounted
+2026-07-10 23:39:08,645 DEBUG subiquity.models.filesystem:1633 considering mount of 8:20
+2026-07-10 23:39:08,645 DEBUG subiquity.models.filesystem:1638 /dev/sdb4 is mounted
+2026-07-10 23:39:08,645 DEBUG subiquity.models.filesystem:1633 considering mount of 7:4
+2026-07-10 23:39:08,645 DEBUG subiquity.models.filesystem:1633 considering mount of 7:5
+2026-07-10 23:39:08,645 DEBUG subiquity.models.filesystem:1633 considering mount of 0:35
+2026-07-10 23:39:08,645 DEBUG subiquity.models.filesystem:1633 considering mount of 0:47
+2026-07-10 23:39:08,645 DEBUG subiquity.models.filesystem:1633 considering mount of 7:8
+2026-07-10 23:39:08,645 DEBUG subiquity.models.filesystem:1633 considering mount of 7:7
+2026-07-10 23:39:08,645 DEBUG subiquity.models.filesystem:1633 considering mount of 7:6
+2026-07-10 23:39:08,645 DEBUG subiquity.models.filesystem:1633 considering mount of 0:27
+2026-07-10 23:39:08,645 DEBUG subiquity.models.filesystem:1633 considering mount of 0:6
+2026-07-10 23:39:08,645 DEBUG subiquity.models.filesystem:1633 considering mount of 0:41
+2026-07-10 23:39:08,645 DEBUG subiquity.models.filesystem:1633 considering mount of 0:42
+2026-07-10 23:39:08,645 DEBUG subiquity.models.filesystem:1633 considering mount of 0:43
+2026-07-10 23:39:08,645 DEBUG subiquity.models.filesystem:1633 considering mount of 0:7
+2026-07-10 23:39:08,645 DEBUG subiquity.models.filesystem:1633 considering mount of 0:12
+2026-07-10 23:39:08,645 DEBUG subiquity.models.filesystem:1633 considering mount of 0:46
+2026-07-10 23:39:08,645 DEBUG subiquity.models.filesystem:1633 considering mount of 0:21
+2026-07-10 23:39:08,645 DEBUG subiquity.models.filesystem:1633 considering mount of 0:44
+2026-07-10 23:39:08,645 DEBUG subiquity.models.filesystem:1633 considering mount of 0:25
+2026-07-10 23:39:08,645 DEBUG subiquity.models.filesystem:1633 considering mount of 0:39
+2026-07-10 23:39:08,645 DEBUG subiquity.models.filesystem:1633 considering mount of 0:45
+2026-07-10 23:39:08,645 DEBUG subiquity.models.filesystem:1633 considering mount of 0:20
+2026-07-10 23:39:08,645 DEBUG subiquity.models.filesystem:1633 considering mount of 0:40
+2026-07-10 23:39:08,645 DEBUG subiquity.models.filesystem:1633 considering mount of 0:48
+2026-07-10 23:39:08,645 DEBUG root:38 finish: subiquity/Filesystem/_probe/probe_once: SUCCESS: restricted=False
+2026-07-10 23:39:08,646 DEBUG subiquity.server.controllers.filesystem:1459 block probing took 6.9 seconds
+2026-07-10 23:39:08,646 DEBUG subiquity.server.controllers.filesystem:1682 start_monitor
+2026-07-10 23:39:08,646 DEBUG root:38 finish: subiquity/Filesystem/_probe: SUCCESS: 

@@ -1,0 +1,39 @@
+2026-07-11T00:13:36.275819+00:00 ubuntu-server groupadd[1394]: group added to /etc/group: name=netdev, GID=1001
+2026-07-11T00:13:36.275824+00:00 ubuntu-server groupadd[1394]: group added to /etc/gshadow: name=netdev
+2026-07-11T00:13:36.275828+00:00 ubuntu-server groupadd[1394]: new group: name=netdev, GID=1001
+2026-07-11T00:13:36.275835+00:00 ubuntu-server useradd[1400]: new group: name=installer, GID=1002
+2026-07-11T00:13:36.275840+00:00 ubuntu-server useradd[1400]: new user: name=installer, UID=1001, GID=1002, home=/home/installer, shell=/usr/bin/subiquity-shell, from=none
+2026-07-11T00:13:36.275844+00:00 ubuntu-server useradd[1400]: add 'installer' to group 'adm'
+2026-07-11T00:13:36.275849+00:00 ubuntu-server useradd[1400]: add 'installer' to group 'dialout'
+2026-07-11T00:13:36.275854+00:00 ubuntu-server useradd[1400]: add 'installer' to group 'cdrom'
+2026-07-11T00:13:36.275859+00:00 ubuntu-server useradd[1400]: add 'installer' to group 'floppy'
+2026-07-11T00:13:36.275864+00:00 ubuntu-server useradd[1400]: add 'installer' to group 'sudo'
+2026-07-11T00:13:36.275869+00:00 ubuntu-server useradd[1400]: add 'installer' to group 'audio'
+2026-07-11T00:13:36.275873+00:00 ubuntu-server useradd[1400]: add 'installer' to group 'dip'
+2026-07-11T00:13:36.275878+00:00 ubuntu-server useradd[1400]: add 'installer' to group 'video'
+2026-07-11T00:13:36.275883+00:00 ubuntu-server useradd[1400]: add 'installer' to group 'plugdev'
+2026-07-11T00:13:36.275887+00:00 ubuntu-server useradd[1400]: add 'installer' to group 'lxd'
+2026-07-11T00:13:36.275893+00:00 ubuntu-server useradd[1400]: add 'installer' to group 'netdev'
+2026-07-11T00:13:36.275897+00:00 ubuntu-server useradd[1400]: add 'installer' to shadow group 'adm'
+2026-07-11T00:13:36.275902+00:00 ubuntu-server useradd[1400]: add 'installer' to shadow group 'dialout'
+2026-07-11T00:13:36.275907+00:00 ubuntu-server useradd[1400]: add 'installer' to shadow group 'cdrom'
+2026-07-11T00:13:36.275912+00:00 ubuntu-server useradd[1400]: add 'installer' to shadow group 'floppy'
+2026-07-11T00:13:36.275916+00:00 ubuntu-server useradd[1400]: add 'installer' to shadow group 'sudo'
+2026-07-11T00:13:36.275921+00:00 ubuntu-server useradd[1400]: add 'installer' to shadow group 'audio'
+2026-07-11T00:13:36.275928+00:00 ubuntu-server useradd[1400]: add 'installer' to shadow group 'dip'
+2026-07-11T00:13:36.275932+00:00 ubuntu-server useradd[1400]: add 'installer' to shadow group 'video'
+2026-07-11T00:13:36.275937+00:00 ubuntu-server useradd[1400]: add 'installer' to shadow group 'plugdev'
+2026-07-11T00:13:36.275942+00:00 ubuntu-server useradd[1400]: add 'installer' to shadow group 'lxd'
+2026-07-11T00:13:36.275947+00:00 ubuntu-server useradd[1400]: add 'installer' to shadow group 'netdev'
+2026-07-11T00:13:36.322057+00:00 ubuntu-server polkitd[1421]: Finished loading, compiling and executing 6 rules
+2026-07-11T00:13:36.324116+00:00 ubuntu-server polkitd[1421]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2026-07-11T00:13:46.872620+00:00 ubuntu-server chpasswd[1782]: pam_unix(chpasswd:chauthtok): password changed for installer
+2026-07-11T00:13:54.176698+00:00 ubuntu-server login[1780]: pam_unix(login:session): session opened for user ubuntu-server(uid=1000) by ubuntu-server(uid=0)
+2026-07-11T00:13:54.204721+00:00 ubuntu-server systemd-logind[1428]: New session 1 of user ubuntu-server.
+2026-07-11T00:13:54.234799+00:00 ubuntu-server (systemd): pam_unix(systemd-user:session): session opened for user ubuntu-server(uid=1000) by ubuntu-server(uid=0)
+2026-07-11T00:13:58.095436+00:00 ubuntu-server login[1834]: pam_unix(login:session): session opened for user ubuntu-server(uid=1000) by ubuntu-server(uid=0)
+2026-07-11T00:13:58.098482+00:00 ubuntu-server systemd-logind[1428]: New session 3 of user ubuntu-server.
+2026-07-11T00:14:04.240971+00:00 ubuntu-server login[1996]: pam_unix(login:session): session opened for user ubuntu-server(uid=1000) by ubuntu-server(uid=0)
+2026-07-11T00:14:04.243908+00:00 ubuntu-server systemd-logind[1428]: New session 4 of user ubuntu-server.
+2026-07-11T00:15:01.384806+00:00 ubuntu-server CRON[2059]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-07-11T00:15:01.398430+00:00 ubuntu-server CRON[2059]: pam_unix(cron:session): session closed for user root

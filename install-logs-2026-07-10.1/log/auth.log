@@ -1,0 +1,36 @@
+2026-07-10T23:41:20.805814+00:00 ubuntu-server groupadd[1461]: group added to /etc/group: name=netdev, GID=1001
+2026-07-10T23:41:20.805818+00:00 ubuntu-server groupadd[1461]: group added to /etc/gshadow: name=netdev
+2026-07-10T23:41:20.805823+00:00 ubuntu-server groupadd[1461]: new group: name=netdev, GID=1001
+2026-07-10T23:41:20.805829+00:00 ubuntu-server useradd[1467]: new group: name=installer, GID=1002
+2026-07-10T23:41:20.805833+00:00 ubuntu-server useradd[1467]: new user: name=installer, UID=1001, GID=1002, home=/home/installer, shell=/usr/bin/subiquity-shell, from=none
+2026-07-10T23:41:20.805838+00:00 ubuntu-server useradd[1467]: add 'installer' to group 'adm'
+2026-07-10T23:41:20.805843+00:00 ubuntu-server useradd[1467]: add 'installer' to group 'dialout'
+2026-07-10T23:41:20.805848+00:00 ubuntu-server useradd[1467]: add 'installer' to group 'cdrom'
+2026-07-10T23:41:20.805852+00:00 ubuntu-server useradd[1467]: add 'installer' to group 'floppy'
+2026-07-10T23:41:20.805857+00:00 ubuntu-server useradd[1467]: add 'installer' to group 'sudo'
+2026-07-10T23:41:20.805862+00:00 ubuntu-server useradd[1467]: add 'installer' to group 'audio'
+2026-07-10T23:41:20.805866+00:00 ubuntu-server useradd[1467]: add 'installer' to group 'dip'
+2026-07-10T23:41:20.805871+00:00 ubuntu-server useradd[1467]: add 'installer' to group 'video'
+2026-07-10T23:41:20.805876+00:00 ubuntu-server useradd[1467]: add 'installer' to group 'plugdev'
+2026-07-10T23:41:20.805881+00:00 ubuntu-server useradd[1467]: add 'installer' to group 'lxd'
+2026-07-10T23:41:20.805885+00:00 ubuntu-server useradd[1467]: add 'installer' to group 'netdev'
+2026-07-10T23:41:20.805892+00:00 ubuntu-server useradd[1467]: add 'installer' to shadow group 'adm'
+2026-07-10T23:41:20.805897+00:00 ubuntu-server useradd[1467]: add 'installer' to shadow group 'dialout'
+2026-07-10T23:41:20.805902+00:00 ubuntu-server useradd[1467]: add 'installer' to shadow group 'cdrom'
+2026-07-10T23:41:20.805907+00:00 ubuntu-server useradd[1467]: add 'installer' to shadow group 'floppy'
+2026-07-10T23:41:20.805911+00:00 ubuntu-server useradd[1467]: add 'installer' to shadow group 'sudo'
+2026-07-10T23:41:20.805916+00:00 ubuntu-server useradd[1467]: add 'installer' to shadow group 'audio'
+2026-07-10T23:41:20.805920+00:00 ubuntu-server useradd[1467]: add 'installer' to shadow group 'dip'
+2026-07-10T23:41:20.805926+00:00 ubuntu-server useradd[1467]: add 'installer' to shadow group 'video'
+2026-07-10T23:41:20.805930+00:00 ubuntu-server useradd[1467]: add 'installer' to shadow group 'plugdev'
+2026-07-10T23:41:20.805935+00:00 ubuntu-server useradd[1467]: add 'installer' to shadow group 'lxd'
+2026-07-10T23:41:20.805939+00:00 ubuntu-server useradd[1467]: add 'installer' to shadow group 'netdev'
+2026-07-10T23:41:20.806386+00:00 ubuntu-server systemd-logind[1494]: New seat seat0.
+2026-07-10T23:41:20.806390+00:00 ubuntu-server systemd-logind[1494]: Watching system buttons on /dev/input/event1 (Power Button)
+2026-07-10T23:41:20.806394+00:00 ubuntu-server systemd-logind[1494]: Watching system buttons on /dev/input/event0 (Power Button)
+2026-07-10T23:41:20.806399+00:00 ubuntu-server systemd-logind[1494]: Watching system buttons on /dev/input/event2 (LITE-ON Technology USB NetVista Full Width Keyboard.)
+2026-07-10T23:41:20.806439+00:00 ubuntu-server polkitd[1488]: Loading rules from directory /etc/polkit-1/rules.d
+2026-07-10T23:41:20.806444+00:00 ubuntu-server polkitd[1488]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-07-10T23:41:20.806449+00:00 ubuntu-server polkitd[1488]: Finished loading, compiling and executing 6 rules
+2026-07-10T23:41:20.806463+00:00 ubuntu-server polkitd[1488]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2026-07-10T23:41:30.725306+00:00 ubuntu-server chpasswd[1838]: pam_unix(chpasswd:chauthtok): password changed for installer

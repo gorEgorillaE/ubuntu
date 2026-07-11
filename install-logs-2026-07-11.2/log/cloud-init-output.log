@@ -1,0 +1,69 @@
+Cloud-init v. 25.2-0ubuntu1~24.04.1 running 'init-local' at Sat, 11 Jul 2026 00:22:25 +0000. Up 13.80 seconds.
+Cloud-init v. 25.2-0ubuntu1~24.04.1 running 'init' at Sat, 11 Jul 2026 00:22:27 +0000. Up 15.16 seconds.
+ci-info: +++++++++++++++++++++++++++Net device info++++++++++++++++++++++++++++
+ci-info: +--------+-------+-----------+-----------+-------+-------------------+
+ci-info: | Device |   Up  |  Address  |    Mask   | Scope |     Hw-Address    |
+ci-info: +--------+-------+-----------+-----------+-------+-------------------+
+ci-info: | enp7s0 | False |     .     |     .     |   .   | 30:c5:99:46:3d:6a |
+ci-info: |   lo   |  True | 127.0.0.1 | 255.0.0.0 |  host |         .         |
+ci-info: |   lo   |  True |  ::1/128  |     .     |  host |         .         |
+ci-info: +--------+-------+-----------+-----------+-------+-------------------+
+ci-info: +++++++++++++++++++Route IPv6 info+++++++++++++++++++
+ci-info: +-------+-------------+---------+-----------+-------+
+ci-info: | Route | Destination | Gateway | Interface | Flags |
+ci-info: +-------+-------------+---------+-----------+-------+
+ci-info: +-------+-------------+---------+-----------+-------+
+Generating public/private rsa key pair.
+Your identification has been saved in /etc/ssh/ssh_host_rsa_key
+Your public key has been saved in /etc/ssh/ssh_host_rsa_key.pub
+The key fingerprint is:
+SHA256:AWiYxlXYr9Oxc9GKRsPVgSwdQf8ERolsUEKykHCVF40 root@ubuntu-server
+The key's randomart image is:
++---[RSA 3072]----+
+| ..=+B=o=@=B=o   |
+|  =.=.o+E.Xoo.   |
+| . .  .+.+ .. .  |
+|        *.. .o   |
+|       +S= o  .  |
+|      o * o      |
+|       o o       |
+|                 |
+|                 |
++----[SHA256]-----+
+Generating public/private ecdsa key pair.
+Your identification has been saved in /etc/ssh/ssh_host_ecdsa_key
+Your public key has been saved in /etc/ssh/ssh_host_ecdsa_key.pub
+The key fingerprint is:
+SHA256:Ig8ESqHvL3sJe/4UcYzozyHYylLvPIF1so3g47JMg2w root@ubuntu-server
+The key's randomart image is:
++---[ECDSA 256]---+
+| oo              |
+|o. . . o         |
+|o   o o o        |
+| ..=o .o         |
+| .++**+ S        |
+|o+=o+B.+         |
+|oE++.o=          |
+|=.=+=.           |
+|.+.*=o.          |
++----[SHA256]-----+
+Generating public/private ed25519 key pair.
+Your identification has been saved in /etc/ssh/ssh_host_ed25519_key
+Your public key has been saved in /etc/ssh/ssh_host_ed25519_key.pub
+The key fingerprint is:
+SHA256:9+nkiV7C4H23jhusGqhs/Albx24h6Jatp04yCFzAYTo root@ubuntu-server
+The key's randomart image is:
++--[ED25519 256]--+
+|.+.              |
+|o..              |
+|E  .             |
+|...              |
+|..   .  S .      |
+|..  . .+.= o .   |
+|. ooooo.=.+ O .  |
+|   =*=o+.. X = . |
+|   +B=o.oo+ *oo  |
++----[SHA256]-----+
+Cloud-init v. 25.2-0ubuntu1~24.04.1 running 'modules:config' at Sat, 11 Jul 2026 00:22:29 +0000. Up 17.00 seconds.
+Cloud-init v. 25.2-0ubuntu1~24.04.1 running 'modules:final' at Sat, 11 Jul 2026 00:22:37 +0000. Up 25.78 seconds.
+Cloud-init v. 25.2-0ubuntu1~24.04.1 finished at Sat, 11 Jul 2026 00:22:37 +0000. Datasource DataSourceNoCloud [seed=/var/lib/cloud/seed/nocloud].  Up 25.82 seconds
